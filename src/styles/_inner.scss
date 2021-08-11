@@ -1,0 +1,103 @@
+$inner-width: 22vmin;
+$inner-height: 22vmin;
+
+.inner {
+	z-index: $zi_inner;
+	position: absolute;
+	// margin: 0 auto;
+	width: $inner-width;
+	height: $inner-height;
+	// top: 50vmin - $inner-height/2;
+	// left: 50vmin - $inner-width/2;
+
+	top: 50%;
+	left: 50%;
+
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+
+	background-image: radial-gradient(
+		closest-side at 50% 50%,
+		rgba(0, 0, 0, 1) 0%,
+		rgba(23, 60, 80, 0.8),
+		rgba(168, 190, 180, 0.9),
+		rgba(168, 190, 180, 0.8),
+		rgba(168, 190, 180, 0.6),
+		rgba(168, 190, 180, 0.5),
+		rgba(168, 190, 180, 0.4),
+		rgba(168, 190, 180, 0.4),
+		rgba(168, 190, 180, 0.4),
+		rgba(168, 190, 180, 0.1),
+		transparent
+	);
+	color: white;
+	border-radius: 100%;
+
+	&__droptarget {
+		position: relative;
+		width: 110%;
+		height: 110%;
+		margin-top: -5%;
+		margin-left: -5%;
+		border-radius: 100%;
+		background-image: radial-gradient(
+			closest-side at 50% 50%,
+			rgba(0, 0, 0, 1) 0%,
+			rgba(23, 60, 80, 0.8),
+			rgba(92, 230, 255, 0.6),
+			rgba(92, 230, 255, 0.6),
+			rgba(92, 230, 255, 0.6),
+			rgba(92, 230, 255, 0.6),
+			rgba(92, 230, 255, 0.6),
+			rgba(92, 230, 255, 0.9),
+			transparent
+		);
+		-webkit-transition: all 200ms ease-out;
+		-moz-transition: all 200ms ease-out;
+		-o-transition: all 200ms ease-out;
+		transition: all 200ms ease-out;
+		@include hoverGlow40;
+		&:hover {
+			transform: scale(1.2);
+			// transition: 200ms ease-out 0.5s;
+		}
+	}
+
+	&__buttonDraggingDroptarget {
+		position: relative;
+		width: 90%;
+		height: 90%;
+		margin-top: 5%;
+		margin-left: 5%;
+		border-radius: 100%;
+		background-image: radial-gradient(
+			closest-side at 50% 50%,
+			rgba(255, 170, 75, 1),
+			rgba(255, 170, 75, 1),
+			rgba(255, 170, 75, 1),
+			rgba(235, 145, 55, 1),
+			rgba(235, 145, 55, 1),
+			rgba(235, 145, 55, 1),
+			rgba(235, 145, 55, 1),
+			rgba(220, 135, 48, 0.95),
+			rgba(220, 135, 48, 0.82),
+			rgba(217, 123, 38, 0.75),
+			rgba(217, 123, 38, 0.5),
+			rgba(217, 123, 38, 0.3),
+			rgba(217, 123, 38, 0.2),
+			rgba(217, 123, 38, 0.1),
+			rgba(217, 123, 38, 0.1),
+			rgba(217, 123, 38, 0.05),
+			transparent
+		);
+		-webkit-transition: all 200ms ease-out;
+		-moz-transition: all 200ms ease-out;
+		-o-transition: all 200ms ease-out;
+		transition: all 200ms ease-out;
+
+		&:hover {
+			transform: scale(1.2);
+			// transition: 200ms ease-out 0.5s;
+		}
+	}
+}

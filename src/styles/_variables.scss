@@ -1,0 +1,50 @@
+// Colors
+@font-face {
+  font-family: 'RussoOne-Regular';
+  src: url('../assets/fonts/RussoOne-Regular.ttf');
+}
+@font-face {
+  font-family: 'Archaic-Roman';
+  src: url('../assets/fonts/archaic_roman.ttf');
+}
+@font-face {
+  font-family: 'NorseBold';
+  src: url('../assets/fonts/NorseBold.otf');
+}
+
+// z-index:
+$zi_closeButton: 99; //
+$zi_pagePanel: 90; //
+$zi_audio: 95;
+$zi_inner: 75;
+$zi-quadrant: 40;
+$zi_outer: 35;
+$zi_fog: 10; //
+$zi_heading: 5;
+$zi_background: 1;
+
+// colors
+$bg: grey;
+$bg-font: black;
+
+$outer-bg: lightblue;
+$outer-font: brown;
+
+$inner-bg: blue;
+$inner-font: red;
+
+$mistblue: rgba(92, 230, 255, 0.43); // #29d6d6
+$dark-mistblue: rgba(40, 215, 215, 0.9); // #28d7d7
+$warmorange: rgba(235, 145, 55, 1); // #eb9137
+$light-warmorange: #f1b171;
+$darker-mistblue: #1e6ae1;
+$darkest-mistblue: #0d2e61;
+$dark-warmorange: #e1341e;
+$darkest-warmorange: #5e2417;
+
+// Breakpoints
+$max-width-mobile: 480px;
+$min-width-tablet: 481px;
+$max-width-tablet: 768px;
+$min-width-desktop: 769px;
+$max-width-desktop: 1024px;

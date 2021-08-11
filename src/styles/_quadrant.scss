@@ -1,0 +1,233 @@
+#dragButton1 {
+  left: 25%;
+  top: 15%;
+}
+#dragButton2 {
+  left: 35%;
+  top: 15%;
+}
+#dragButton3 {
+  left: 25%;
+  top: 40%;
+}
+#dragButton4 {
+  left: 35%;
+  top: 40%;
+}
+
+#dragPrompt1 {
+  // position: absolute;
+  // left: 42%;
+  // top: 68%;
+  margin-left: 200px;
+  // transform: translate(200px, 500px);
+  transform: rotate(52deg);
+  @media screen and (min-width: $min-width-tablet) {
+    // left: 50%;
+    // top: 60%;
+  }
+}
+#dragPrompt2 {
+  // position: absolute;
+  // left: -10%;
+  // top: 68%;
+  transform: rotate(128deg);
+  @media screen and (min-width: $min-width-tablet) {
+    // left: 15%;
+    // top: 60%;
+  }
+}
+#dragPrompt3 {
+  // position: absolute;
+  // left: 42%;
+  // top: 12%;
+  transform: rotate(-52deg);
+  @media screen and (min-width: $min-width-tablet) {
+    // left: 50%;
+    // top: 25%;
+  }
+}
+#dragPrompt4 {
+  // position: absolute;
+  // left: -10%;
+  // top: 12%;
+  transform: rotate(-128deg);
+  @media screen and (min-width: $min-width-tablet) {
+    // left: 15%;
+    // top: 25%;
+  }
+}
+
+.quadrant {
+  position: relative;
+  display: grid;
+  grid-template-columns: 33% 34% 33%;
+  grid-template-rows: 33% 34% 33%;
+  height: 100%;
+  z-index: $zi-quadrant;
+  @include hoverGlow20;
+
+  &__heading {
+    position: absolute;
+  }
+
+  &__tile {
+    position: relative;
+    border: 1px dotted #6dbbc983;
+    @include hoverGlow20;
+    // &:hover {
+    // 	background-color: $mistblue;
+    // 	opacity: 0.3;
+    // }
+  }
+
+  &__dragPrompt {
+    font-family: sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    overflow: hidden;
+    background: linear-gradient(90deg, $mistblue, #fff, $mistblue);
+    background-repeat: no-repeat;
+    background-size: 80%;
+    animation: animate 3s linear infinite;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: $mistblue;
+    text-align: center;
+
+    &__arrow {
+      font-size: 1.1em;
+      @media screen and (min-width: $min-width-tablet) {
+        font-size: 1.7em;
+      }
+    }
+    &__text {
+      font-size: 1.3em;
+      #dragPromptText_D {
+        font-size: 1.2em;
+        @media screen and (min-width: $min-width-tablet) {
+          font-size: 1.9em;
+        }
+      }
+      #dragPromptText_R {
+        font-size: 1.1em;
+        @media screen and (min-width: $min-width-tablet) {
+          font-size: 1.7em;
+        }
+      }
+      #dragPromptText_A {
+        font-size: 1em;
+        @media screen and (min-width: $min-width-tablet) {
+          font-size: 1.5em;
+        }
+      }
+      #dragPromptText_G {
+        font-size: 0.9em;
+        @media screen and (min-width: $min-width-tablet) {
+          font-size: 1.3em;
+        }
+      }
+    }
+  }
+
+  &__dragbutton {
+    opacity: 1;
+    position: absolute;
+    display: flex;
+    border-radius: 50%;
+    width: 65px;
+    height: 65px;
+    @media screen and (min-width: $min-width-tablet) {
+      width: 95px;
+      height: 95px;
+    }
+    cursor: grabbing;
+
+    &__icon {
+      // position: absolute;
+      margin: auto;
+      color: lightcoral;
+      width: 65px;
+      height: 65px;
+      @media screen and (min-width: $min-width-tablet) {
+        width: 95px;
+        height: 95px;
+      }
+      border: 1px dotted beige;
+      border-radius: 50%;
+      padding: -50%;
+      @include transition250ms;
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+
+    background-image: radial-gradient(
+      closest-side at 50% 50%,
+      rgba(255, 170, 75, 1),
+      rgba(255, 170, 75, 1),
+      rgba(255, 170, 75, 1),
+      rgba(235, 145, 55, 1),
+      rgba(235, 145, 55, 1),
+      rgba(235, 145, 55, 1),
+      rgba(235, 145, 55, 1),
+      rgba(220, 135, 48, 0.95),
+      rgba(220, 135, 48, 0.82),
+      rgba(217, 123, 38, 0.75),
+      rgba(217, 123, 38, 0.5),
+      rgba(217, 123, 38, 0.3),
+      rgba(217, 123, 38, 0.2),
+      rgba(217, 123, 38, 0.1),
+      rgba(217, 123, 38, 0.1),
+      rgba(217, 123, 38, 0.05),
+      transparent
+    );
+
+    animation-name: spin;
+    animation-duration: 10000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+    &:hover {
+      box-shadow: 0 0 40px #ddd;
+      background-image: radial-gradient(
+        closest-side at 50% 50%,
+        rgba(255, 255, 255, 1),
+        rgba(235, 235, 235, 1),
+        rgba(235, 235, 235, 0.9),
+        rgba(220, 220, 220, 0.85),
+        rgba(220, 220, 220, 0.85),
+        rgba(220, 220, 220, 0.75),
+        rgba(220, 220, 220, 0.72),
+        rgba(220, 220, 220, 0.7),
+        rgba(220, 220, 220, 0.7),
+        rgba(210, 210, 210, 0.7),
+        rgba(190, 190, 190, 0.5),
+        rgba(190, 190, 190, 0.3),
+        rgba(190, 190, 190, 0.2),
+        rgba(150, 150, 150, 0.1),
+        rgba(150, 150, 150, 0.1),
+        rgba(150, 150, 150, 0.1),
+        transparent
+      );
+    }
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes animate {
+  0% {
+    background-position: -500%;
+  }
+  100% {
+    background-position: 500%;
+  }
+}

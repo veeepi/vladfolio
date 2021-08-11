@@ -1,0 +1,27 @@
+@mixin transition250ms {
+  -webkit-transition: all 250ms ease-out;
+  -moz-transition: all 250ms ease-out;
+  -o-transition: all 250ms ease-out;
+  transition: all 250ms ease-out;
+}
+@mixin hoverGlow20 {
+  @include transition250ms();
+  &:hover {
+    box-shadow: 0 0 20px $warmorange;
+  }
+}
+@mixin hoverGlow40 {
+  @include transition250ms();
+  &:hover {
+    box-shadow: 0 0 40px $warmorange;
+  }
+}
+@mixin hoverGlowBorder {
+  @include transition250ms();
+  &:hover {
+    outline-style: solid;
+    outline-color: $warmorange;
+    outline-width: thick;
+    box-shadow: 0 0 40px $warmorange;
+  }
+}

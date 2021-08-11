@@ -1,0 +1,85 @@
+html,
+body {
+	height: 100vmin;
+}
+
+.App {
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+	background-image: url('https://source.unsplash.com/3ytjETpQMNY/1600x900');
+	// background-color: green;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: top;
+}
+
+.pagePanel__close {
+	z-index: $zi_closeButton;
+	position: absolute;
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	border: none;
+	top: 15vh;
+	right: 4%;
+	cursor: pointer;
+
+	background-image: radial-gradient(
+		closest-side at 50% 50%,
+		rgba(235, 185, 85, 1) 25%,
+		rgba(235, 145, 55, 1) 75%,
+		rgba(92, 230, 255, 0.43) 99%
+	);
+	@include hoverGlow20;
+	&:hover {
+		background-image: radial-gradient(
+			closest-side at 50% 50%,
+			rgba(220, 220, 220, 1),
+			rgba(225, 225, 225, 1),
+			rgba(230, 230, 230, 1),
+			rgba(240, 240, 240, 1),
+			rgba(255, 255, 255, 1),
+			rgba(235, 145, 55, 1)
+		);
+	}
+
+	&__X {
+		margin: auto;
+	}
+}
+
+.audio_button {
+	display: none;
+	// z-index: 2;
+	z-index: $zi_audio;
+	position: absolute;
+	left: 27%;
+	top: -5%;
+	width: 4vw;
+	height: 4vw;
+
+	padding: 15%;
+
+	border-radius: 50%;
+
+	background-image: radial-gradient(
+		closest-side at 50% 50%,
+		rgba(92, 230, 255, 1) 0%,
+		rgba(92, 230, 255, 0.9),
+		rgba(92, 230, 255, 0.75),
+		rgba(92, 230, 255, 0.63),
+		rgba(92, 230, 255, 0.43),
+		rgba(92, 230, 255, 0.43),
+		rgba(92, 230, 255, 0.35),
+		rgba(92, 230, 255, 0.2),
+		rgba(92, 230, 255, 0.15),
+		rgba(92, 230, 255, 0.1),
+		transparent
+	);
+	// background-color: $mistblue;
+
+	&:hover {
+		background-color: $warmorange;
+	}
+}

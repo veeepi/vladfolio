@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+import './styles/main.scss';
 import './App.css';
 import RadialMenu from './components/menu/RadialMenu';
 
