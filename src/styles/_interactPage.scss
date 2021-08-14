@@ -1,0 +1,30 @@
+.interactPage {
+  &__heading {
+    margin-top: 10%;
+    margin-right: auto;
+    margin-left: auto;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: center;
+    &__letters {
+      cursor: default;
+      font-size: 3em;
+      font-family: 'Archaic-Roman';
+      @include transition250ms;
+      span {
+        @include hoverGlow20;
+        &:hover {
+          color: white;
+        }
+      }
+    }
+    &__icon {
+      @include transition250ms;
+      justify-content: center;
+      @include hoverGlow20;
+      &:hover {
+        color: white;
+      }
+    }
+  }
+}

@@ -1,0 +1,102 @@
+.aboutPage {
+	cursor: default;
+	width: 90%;
+	// font-size: 1em;
+	margin: auto;
+	font-family: 'RussoOne-Regular';
+	@media screen and (min-width: $min-width-tablet) {
+		width: 80%;
+	}
+
+	h1 {
+		font-family: 'NorseBold';
+		font-size: 26px;
+		@include transition250ms;
+		&:hover {
+			color: white;
+		}
+	}
+
+	p,
+	h3,
+	h4,
+	li {
+		@include transition250ms;
+		&:hover {
+			color: white;
+		}
+	}
+
+	&__intro {
+		margin-top: 5%;
+		margin-bottom: 5%;
+		display: flex;
+		@media screen and (min-width: $min-width-tablet) {
+			display: grid;
+			grid-template-columns: 50% 50%;
+		}
+		border: 1px dotted $dark-mistblue;
+
+		&__image {
+			border: 1px dotted $dark-mistblue;
+			padding: 5%;
+			display: none;
+			@media screen and (min-width: $min-width-tablet) {
+				display: block;
+			}
+			border: 1px dotted $dark-mistblue;
+			border-radius: 50%;
+			// border-radius: 50px 0 0 0;
+			opacity: 0.6;
+			// margin: 5%;
+			@include transition250ms;
+			@include hoverGlow20;
+			&:hover {
+				opacity: 1;
+			}
+		}
+		&__narrative {
+			border: 1px dotted $dark-mistblue;
+			text-align: left;
+			@include hoverGlow20;
+		}
+	}
+	&__skills {
+		display: grid;
+		grid-template-columns: 50% 50%;
+
+		&__column {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			border: 1px dotted $dark-mistblue;
+			@include hoverGlow20;
+			&__heading {
+				padding: 5%;
+			}
+			&__body {
+				padding: 5%;
+				font-size: 0.8em;
+			}
+		}
+	}
+	&__experience {
+		// padding: 5%;
+		text-align: left;
+
+		display: flex;
+		flex-direction: column;
+		&__section {
+			padding: 5%;
+			border: 1px dotted $dark-mistblue;
+			@include hoverGlow20;
+		}
+	}
+	&__download {
+		display: flex;
+		a {
+			margin: auto;
+			padding: 5%;
+		}
+	}
+}
