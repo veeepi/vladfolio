@@ -2,11 +2,11 @@ import React, { useContext } from 'react';
 import { useDrag } from 'react-dnd';
 // import { ItemTypes } from '../utils/items';
 // import { GiBarbedSun } from 'react-icons/gi';
-import { DragSelectedContext } from '../../App';
+import { DragSourceContext } from '../../App';
 
 // Drag Source
 const DragButton = (pageId) => {
-  const { toggleAButtonIsDragging } = useContext(DragSelectedContext);
+  const { toggleAButtonIsDragging } = useContext(DragSourceContext);
 
   const [{ isDragging }, drag] = useDrag({
     type: 'pagePanel',
