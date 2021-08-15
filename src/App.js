@@ -5,12 +5,12 @@ import { DndProvider } from 'react-dnd';
 import { isMobile, isBrowser } from 'react-device-detect';
 import { HTML5Backend } from 'react-dnd-html5-backend';
 import { TouchBackend } from 'react-dnd-touch-backend';
-
 import RadialMenu from './components/menu/RadialMenu';
 import PagePanel from './components/panel/PagePanel';
 import pages from './data/Pages';
 
-export const DragContext = createContext();
+// export const DragContext = createContext();
+export const DragSelectedContext = createContext();
 
 function App() {
   // state var
@@ -41,17 +41,14 @@ function App() {
 
   return (
     <div className="App">
-      <RadialMenu />
-
-      <DragContext.Provider
-        value={{ toggleAButtonIsDragging, updateSelectedPage }}
-      >
+      <DragSelectedContext.Provider value={{ toggleAButtonIsDragging }}>
         <DndProvider backend={isMobile ? TouchBackend : HTML5Backend}>
           {displayPagePanel /*on &&*/ && (
             <PagePanel pageDisplayed={pageDisplayed} />
           )}
+          <RadialMenu />
         </DndProvider>
-      </DragContext.Provider>
+      </DragSelectedContext.Provider>
     </div>
   );
 }
