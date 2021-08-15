@@ -10,7 +10,7 @@ import PagePanel from './components/panel/PagePanel';
 import pages from './data/Pages';
 
 // export const DragContext = createContext();
-export const DragSelectedContext = createContext();
+export const DragSourceContext = createContext();
 
 function App() {
   // state var
@@ -41,14 +41,14 @@ function App() {
 
   return (
     <div className="App">
-      <DragSelectedContext.Provider value={{ toggleAButtonIsDragging }}>
+      <DragSourceContext.Provider value={{ toggleAButtonIsDragging }}>
         <DndProvider backend={isMobile ? TouchBackend : HTML5Backend}>
           {displayPagePanel /*on &&*/ && (
             <PagePanel pageDisplayed={pageDisplayed} />
           )}
           <RadialMenu />
         </DndProvider>
-      </DragSelectedContext.Provider>
+      </DragSourceContext.Provider>
     </div>
   );
 }
