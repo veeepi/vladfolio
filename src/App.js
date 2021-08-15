@@ -46,9 +46,11 @@ function App() {
       <DragContext.Provider
         value={{ toggleAButtonIsDragging, updateSelectedPage }}
       >
-        {displayPagePanel /*on &&*/ && (
-          <PagePanel pageDisplayed={pageDisplayed} />
-        )}
+        <DndProvider backend={isMobile ? TouchBackend : HTML5Backend}>
+          {displayPagePanel /*on &&*/ && (
+            <PagePanel pageDisplayed={pageDisplayed} />
+          )}
+        </DndProvider>
       </DragContext.Provider>
     </div>
   );
