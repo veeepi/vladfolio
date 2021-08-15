@@ -11,6 +11,7 @@ import pages from './data/Pages';
 
 // export const DragContext = createContext();
 export const DragSourceContext = createContext();
+export const DragTargetContext = createContext();
 
 function App() {
   // state var
@@ -42,12 +43,14 @@ function App() {
   return (
     <div className="App">
       <DragSourceContext.Provider value={{ toggleAButtonIsDragging }}>
-        <DndProvider backend={isMobile ? TouchBackend : HTML5Backend}>
-          {displayPagePanel /*on &&*/ && (
-            <PagePanel pageDisplayed={pageDisplayed} />
-          )}
-          <RadialMenu />
-        </DndProvider>
+        <DragTargetContext.Provider value={{ updateSelectedPage }}>
+          <DndProvider backend={isMobile ? TouchBackend : HTML5Backend}>
+            {displayPagePanel /*on &&*/ && (
+              <PagePanel pageDisplayed={pageDisplayed} />
+            )}
+            <RadialMenu aButtonIsDragging={aButtonIsDragging} />
+          </DndProvider>
+        </DragTargetContext.Provider>
       </DragSourceContext.Provider>
     </div>
   );
