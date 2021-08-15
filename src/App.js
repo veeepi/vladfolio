@@ -1,6 +1,11 @@
 import './styles/main.scss';
 import './App.css';
 import React, { useState, useEffect, createContext } from 'react';
+import { DndProvider } from 'react-dnd';
+import { isMobile, isBrowser } from 'react-device-detect';
+import { HTML5Backend } from 'react-dnd-html5-backend';
+import { TouchBackend } from 'react-dnd-touch-backend';
+
 import RadialMenu from './components/menu/RadialMenu';
 import PagePanel from './components/panel/PagePanel';
 import pages from './data/Pages';
