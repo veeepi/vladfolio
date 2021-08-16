@@ -5,14 +5,13 @@ import { useDrag } from 'react-dnd';
 import { DragSourceContext } from '../../App';
 
 // Drag Source
-const DragButton = (pageId) => {
+const DragButton = (props) => {
   const { toggleAButtonIsDragging } = useContext(DragSourceContext);
 
   const [{ isDragging }, drag] = useDrag({
     type: 'pagePanel',
     item: {
-      //   type: 'pagePanel',
-      id: pageId,
+      id: props.pageId,
     },
     collect: (monitor) => ({
       isDragging: !!monitor.isDragging(),
@@ -25,7 +24,7 @@ const DragButton = (pageId) => {
       ref={drag}
       style={isDragging ? { opacity: '0' } : { opacity: '1' }}
       className="quadrant__dragbutton"
-      id={'dragButton' + pageId}
+      id={'dragButton' + props.pageId}
     >
       {isDragging && toggleAButtonIsDragging()}
       {/* <GiBarbedSun className="quadrant__dragbutton__icon" /> */}
