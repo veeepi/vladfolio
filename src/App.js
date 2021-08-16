@@ -46,7 +46,10 @@ function App() {
         <DragTargetContext.Provider value={{ updateSelectedPage }}>
           <DndProvider backend={isMobile ? TouchBackend : HTML5Backend}>
             {displayPagePanel /*on &&*/ && (
-              <PagePanel pageDisplayed={pageDisplayed} />
+              <PagePanel
+                pageDisplayed={pageDisplayed}
+                toggleDisplayPagePanel={toggleDisplayPagePanel}
+              />
             )}
             <RadialMenu aButtonIsDragging={aButtonIsDragging} />
           </DndProvider>
