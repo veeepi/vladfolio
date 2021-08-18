@@ -1,18 +1,19 @@
 import React from 'react';
 import pages from '../../data/Pages';
+import CloseButton from './CloseButton';
 import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
 import InteractPage from './pages/InteractPage';
 import PortfolioPage from './pages/PortfolioPage';
 
-export default function PagePanel({ pageDisplayed }) {
+export default function PagePanel({ pageDisplayed, toggleDisplayPagePanel }) {
   const pageTitle = pages[pageDisplayed.id - 1].title;
   const arrayPageTitle = pageTitle.split('');
 
   return (
     <div className="pagePanel">
       {/* display data from an object */}
-
+      <CloseButton toggleDisplayPagePanel={toggleDisplayPagePanel} />
       <h1 className="pagePanel__heading">
         {arrayPageTitle.map((char, index) => {
           return (
