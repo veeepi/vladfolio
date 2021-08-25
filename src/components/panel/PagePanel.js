@@ -15,7 +15,6 @@ export default function PagePanel({ pageDisplayed, toggleDisplayPagePanel }) {
     <div className="pagePanel">
       {/* display data from an object */}
       <div className="pagePanel__heading">
-        <CloseButton toggleDisplayPagePanel={toggleDisplayPagePanel} />
         <h1 className="pagePanel__heading__title">
           {arrayPageTitle.map((char, index) => {
             return (
@@ -29,6 +28,7 @@ export default function PagePanel({ pageDisplayed, toggleDisplayPagePanel }) {
             );
           })}
         </h1>
+        <CloseButton toggleDisplayPagePanel={toggleDisplayPagePanel} />
       </div>
 
       {/* This component should conditionally render other components */}

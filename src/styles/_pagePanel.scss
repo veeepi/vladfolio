@@ -23,9 +23,10 @@
   }
 
   &__heading {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     &__title {
-      // position: absolute;
-      // top: 20%;
       text-align: left;
       margin-left: 10%;
       margin-top: 2%;
