@@ -3,40 +3,85 @@
   border-radius: 50px;
   position: absolute;
   background-color: $mistblue;
-  width: 95%;
-  margin: auto;
-  max-width: 800px;
-  min-height: 40vh;
-  top: 15%;
-  left: 2.5%;
-  padding-bottom: 5%;
-  border: 2.4px solid $dark-mistblue;
+  width: 90%;
+  // margin: auto;
+  // max-width: 800px;
+  height: 90%;
+  // min-height: 40vh;
+  // top: 15%;
+  // left: 2.5%;
+  // padding-bottom: 5%;
+  border: 2.1px solid $dark-mistblue;
 
   @media screen and (min-width: $min-width-tablet) {
     width: 80%;
-    left: 10%;
+    // left: 10%;
   }
   @media screen and (min-width: 1000px) {
     width: 50%;
-    left: 25%;
+    // left: 25%;
   }
 
   &__heading {
-    // position: absolute;
-    // top: 20%;
-    text-align: left;
-    margin-left: 10%;
-    margin-top: 2%;
-    font-family: 'RussoOne-Regular';
-    font-size: 42px;
-    transform: rotate(-7deg);
-    @media screen and (min-width: $min-width-tablet) {
-      font-size: 50px;
-    }
+    &__title {
+      // position: absolute;
+      // top: 20%;
+      text-align: left;
+      margin-left: 10%;
+      margin-top: 2%;
+      font-family: 'RussoOne-Regular';
+      font-size: 42px;
+      transform: rotate(-7deg);
+      @media screen and (min-width: $min-width-tablet) {
+        font-size: 50px;
+      }
 
-    &__char:hover {
-      cursor: default;
-      color: white;
+      &__char:hover {
+        cursor: default;
+        color: white;
+      }
     }
+    &__close {
+      display: flex;
+      margin-left: auto;
+      margin-top: 10px;
+      margin-right: 10px;
+      //   justify-content: flex-end;
+      z-index: $zi_closeButton;
+      // position: absolute;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      border: none;
+      //   top: 15vh;
+      //   right: 4%;
+      cursor: pointer;
+
+      background-image: radial-gradient(
+        closest-side at 50% 50%,
+        rgba(235, 185, 85, 1) 25%,
+        rgba(235, 145, 55, 1) 75%,
+        rgba(92, 230, 255, 0.43) 99%
+      );
+      @include hoverGlow20;
+      &:hover {
+        background-image: radial-gradient(
+          closest-side at 50% 50%,
+          rgba(220, 220, 220, 1),
+          rgba(225, 225, 225, 1),
+          rgba(230, 230, 230, 1),
+          rgba(240, 240, 240, 1),
+          rgba(255, 255, 255, 1),
+          rgba(235, 145, 55, 1)
+        );
+      }
+
+      &__X {
+        margin: auto;
+      }
+    }
+  }
+
+  &__body {
   }
 }

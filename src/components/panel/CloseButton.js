@@ -3,7 +3,7 @@ import React from 'react';
 export default function CloseButton({ toggleDisplayPagePanel }) {
   return (
     <button
-      className="pagePanel__close"
+      className="pagePanel__heading__close"
       onClick={() => {
         // toggle();
         toggleDisplayPagePanel();

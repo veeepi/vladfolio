@@ -5,6 +5,9 @@ body {
 
 .App {
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100vw;
   height: 100vh;
   background-image: url('https://source.unsplash.com/3ytjETpQMNY/1600x900');
@@ -12,46 +15,6 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top;
-}
-
-.pagePanel__close {
-  display: flex;
-  margin-left: auto;
-  margin-top: 10px;
-  margin-right: 10px;
-  //   justify-content: flex-end;
-  z-index: $zi_closeButton;
-  // position: absolute;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  border: none;
-  //   top: 15vh;
-  //   right: 4%;
-  cursor: pointer;
-
-  background-image: radial-gradient(
-    closest-side at 50% 50%,
-    rgba(235, 185, 85, 1) 25%,
-    rgba(235, 145, 55, 1) 75%,
-    rgba(92, 230, 255, 0.43) 99%
-  );
-  @include hoverGlow20;
-  &:hover {
-    background-image: radial-gradient(
-      closest-side at 50% 50%,
-      rgba(220, 220, 220, 1),
-      rgba(225, 225, 225, 1),
-      rgba(230, 230, 230, 1),
-      rgba(240, 240, 240, 1),
-      rgba(255, 255, 255, 1),
-      rgba(235, 145, 55, 1)
-    );
-  }
-
-  &__X {
-    margin: auto;
-  }
 }
 
 .audio_button {
