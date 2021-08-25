@@ -29,7 +29,10 @@ export default function AboutPage() {
           </p>
           <p>
             I currently possess 7 years of experience in Accounting &amp;
-            Finance in both private and public sector. However, my passion for programming has driven me to attain 1 year of Software Developer training through the British Columbia Institute of Technology simultaneous to employment.
+            Finance in both private and public sector. However, my passion for
+            programming has driven me to attain 1 year of Software Developer
+            training through the British Columbia Institute of Technology
+            simultaneous to employment.
           </p>
           <br />
         </div>
