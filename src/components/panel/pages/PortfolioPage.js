@@ -1,5 +1,6 @@
 import React from 'react';
 import projects from '../../../data/Projects';
+import Tile from '../../custom/Tile';
 
 export default function PortfolioPage() {
   return (
@@ -40,11 +41,11 @@ export default function PortfolioPage() {
         </form>
       </div>
 
-      {/* <div className="portfolioPage__tiles">
-					{portfolioItems.map((item, index) => {
-						return <PortfolioTile portfolioItem={item} key={index} />;
-					})}
-				</div> */}
+      <div className="portfolioPage__tiles">
+        {projects.map((item, index) => {
+          return <Tile portfolioItem={item} key={index} />;
+        })}
+      </div>
     </div>
   );
 }
