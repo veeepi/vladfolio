@@ -22,7 +22,7 @@ export default function AboutPage() {
           <h1 className="aboutPage__intro__narrative__greet">
             Hi, my name is Vlad.
           </h1>
-          <p>
+          <p className="aboutPage__intro__narrative__textbox">
             <br />I like to think big, and to simplify life's problems. My
             professional and life experience awakened a passion for utilizing
             the magic of programming towards solving problems in creative ways.
