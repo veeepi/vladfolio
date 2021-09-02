@@ -1,8 +1,16 @@
 import React, { useState } from 'react';
 import { debounce } from 'lodash';
+// import projectImage from '../../assets/images/projects/BOBN.jpg';
 
-export default function Tile({ portfolioItem }) {
+require('dotenv').config();
+const PROJECT_IMAGES_FILEPATH =
+  process.env.REACT_APP_FILEPATH_FROM_PORTFOLIOPAGE_TILE_OF_PROJECT_IMAGES;
+
+export default function Tile({ project }) {
   const [hovered, setHovered] = useState(false);
+
+  // console.log(typeof (PROJECT_IMAGES_FILEPATH + project.imageFileName));
+  // const projectImage = require('../../assets/images/projects/BOBN.jpg');
 
   return (
     <div
@@ -17,15 +25,15 @@ export default function Tile({ portfolioItem }) {
             className="portfolioPage__tiles__tile__info__detail"
           >
             <a
-              href={portfolioItem.url}
+              href={project.url}
               id="portfolioItem_url"
               className="portfolioPage__tiles__tile__info__detail__link"
             >
-              {portfolioItem.title}
+              {project.title}
             </a>
           </h3>
           <p>
-            {portfolioItem.techIcons?.map((tech, index) => (
+            {project.techIcons?.map((tech, index) => (
               <img src={tech} width={'50px'} />
             ))}
           </p>
@@ -33,15 +41,18 @@ export default function Tile({ portfolioItem }) {
             id="portfolioItem_description"
             className="portfolioPage__tiles__tile__info__detail"
           >
-            {portfolioItem.description}
+            {project.description}
           </p>
         </div>
       ) : (
         <img
           className="portfolioPage__tiles__tile__info"
-          src={portfolioItem.cardImagePath}
-          width="100%"
-          height="100%"
+          // src={projectImage}
+          // src={require('../../assets/images/projects/Checkmarks.jpg').default}
+          // src={require('../../assets/images/projects/Checkmarks.jpg')}
+          src={require(PROJECT_IMAGES_FILEPATH + project.imageFileName).default}
+          width="100"
+          height="100"
         />
       )}
     </div>

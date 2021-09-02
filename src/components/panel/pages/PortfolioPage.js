@@ -43,7 +43,7 @@ export default function PortfolioPage() {
 
       <div className="portfolioPage__tiles">
         {projects.map((item, index) => {
-          return <Tile portfolioItem={item} key={index} />;
+          return <Tile project={item} key={index} />;
         })}
       </div>
     </div>
