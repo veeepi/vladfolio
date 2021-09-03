@@ -2,79 +2,96 @@
 
 .portfolioPage {
   // background-color: $mistblue;
+  display: flex;
+  flex-direction: row;
   margin: auto;
-  width: 90%;
+  width: 98%;
   min-height: 50vh;
-  height: 100%;
+  // height: 100%;
   // overflow: scroll;
 
   @media screen and (min-width: $min-width-tablet) {
+    flex-direction: row-reverse;
   }
 
   &__filter {
     font-family: 'RussoOne-Regular';
     font-size: 20px;
-    border-radius: 50px;
+    border-radius: 0 0 50px 0;
     background: linear-gradient(
       45deg,
       rgba($mistblue, 0.8),
       rgba($mistblue, 0.4)
     );
-    padding: 3%;
-    margin-top: 8%;
+    // padding: 3%;
+    // margin-top: 8%;
     @include hoverGlow20;
   }
 
-  &__tiles {
-    background-color: $mistblue;
-    display: grid;
-    grid-template-columns: 100%;
-    margin-top: 5%;
-    height: 50%;
+  &__body {
+    border-radius: 0 0 0 50px;
+    height: 100%;
 
-    @media screen and (min-width: $min-width-tablet) {
-      display: grid;
-      grid-template-columns: 50% 50%;
-    }
+    &__tiles {
+      border: 5px solid red;
+      // border: 5px solid red;
+      background-color: $mistblue;
+      // display: flex;
+      // display: grid;
+      // grid-template-columns: 100%;
+      // margin-top: 5%;
 
-    @media screen and (min-width: $min-width-desktop) {
-      display: grid;
-      grid-template-columns: 25% 25% 25% 25%;
-    }
-    @include hoverGlow20;
+      // height: 100%;
 
-    &__tile {
-      margin: 1.5%;
-      height: 200px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      -webkit-transition: all 250ms ease-out;
-      -moz-transition: all 250ms ease-out;
-      -o-transition: all 250ms ease-out;
-      transition: all 250ms ease-out;
-      &:hover {
-        outline-style: solid;
-        outline-color: $warmorange;
-        outline-width: thick;
-        box-shadow: 0 0 40px $warmorange;
+      @media screen and (min-width: $min-width-tablet) {
+        display: grid;
+        grid-template-columns: 50% 50%;
       }
-      &__info {
-        cursor: default;
-        &__detail {
-          margin: 10%;
-          font-family: 'RussoOne-Regular';
 
-          #portfolioItem_url {
-            font-size: 24px;
+      @media screen and (min-width: $min-width-desktop) {
+        display: grid;
+        grid-template-columns: 25% 25% 25% 25%;
+      }
+      @include hoverGlow20;
 
-            // color: $darkest-warmorange;
-            color: $darkest-mistblue;
-            text-decoration: none;
-            @include hoverGlow20;
-          }
-          #portfolioItem_description {
+      &__tile {
+        @media screen and (min-width: $min-width-tablet) {
+          height: 25vh;
+        }
+        @media screen and (min-width: $min-width-desktop) {
+          height: 200px;
+        }
+        height: 40vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        -webkit-transition: all 250ms ease-out;
+        -moz-transition: all 250ms ease-out;
+        -o-transition: all 250ms ease-out;
+        transition: all 250ms ease-out;
+        &:hover {
+          outline-style: solid;
+          outline-color: $warmorange;
+          outline-width: thick;
+          box-shadow: 0 0 40px $warmorange;
+        }
+        &__info {
+          cursor: default;
+          &__detail {
+            margin: 10%;
             font-family: 'RussoOne-Regular';
+
+            #portfolioItem_url {
+              font-size: 24px;
+
+              // color: $darkest-warmorange;
+              color: $darkest-mistblue;
+              text-decoration: none;
+              @include hoverGlow20;
+            }
+            #portfolioItem_description {
+              font-family: 'RussoOne-Regular';
+            }
           }
         }
       }
