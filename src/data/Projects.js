@@ -8,6 +8,7 @@ const projects = [
       'Trademark Registration Application for a local Law Firm, integrated with 3rd party services (Clio, LawPay). React front-end and ASP.NET server-side.',
     cardImagePath: '../../assets/images/projects/Checkmarks.jpg',
     imageFileName: 'Checkmarks.jpg',
+    imageFilePath: require('../assets/images/projects/Checkmarks.jpg'),
     url: '',
     techIcons: [
       '../assets/images/tech/icon-react.png',
@@ -24,6 +25,7 @@ const projects = [
       'Fitness coach CRM for managing client relationships and schedule. Built with React, using Firestore Authentication and Firestore database.',
     cardImagePath: '../../assets/images/projects/Holistic.jpg',
     imageFileName: 'Holistic.jpg',
+    imageFilePath: require('../assets/images/projects/Holistic.jpg'),
     url: '',
     techIcons: [
       '../assets/images/tech/icon-react.png',
@@ -39,6 +41,7 @@ const projects = [
       'Social Media application, built with React and using AWS Lambda, API Gateway and DynamoDB.',
     cardImagePath: '../../assets/images/projects/Vladculator.jpg',
     imageFileName: 'Vladculator.jpg',
+    imageFilePath: require('../assets/images/projects/Vladculator.jpg'),
     url: '',
     techIcons: [
       '../assets/images/tech/icon-react.png',
@@ -56,6 +59,7 @@ const projects = [
       'Stock trading app, built with React-Native, consuming Stock Price API, with Firebase Authentication and Firestore database.',
     cardImagePath: '../../assets/images/projects/Vladculator.jpg',
     imageFileName: 'Vladculator.jpg',
+    imageFilePath: require('../assets/images/projects/Vladculator.jpg'),
     url: '',
     techIcons: [
       '../assets/images/tech/icon-react.png',
@@ -72,6 +76,7 @@ const projects = [
       'Full-Stack App build with ASP.NET and React.js., impleneting User Authentication and CRUD operations with a live database. Users can view, create, edit and delete wishlists and items.',
     cardImagePath: '../../assets/images/projects/WishBucket.jpg',
     imageFileName: 'WishBucket.jpg',
+    imageFilePath: require('../assets/images/projects/WishBucket.jpg'),
     url: 'https://wishbucket.netlify.app/',
     techIcons: [
       '../assets/images/tech/icon-react.png',
@@ -88,6 +93,7 @@ const projects = [
       'Front-end implementation of a fitness hub for interacting with Health & Wellness professionals and their services.',
     cardImagePath: '../../assets/images/projects/Shredz.jpg',
     imageFileName: 'Shredz.jpg',
+    imageFilePath: require('../assets/images/projects/Shredz.jpg'),
     url: 'https://lucid-hawking-f430e1.netlify.app/',
     techIcons: [
       '../assets/images/tech/icon-html5.png',
@@ -104,6 +110,7 @@ const projects = [
       "Front-end React.js app which connects to The Movie Database's (TMDb) API",
     cardImagePath: '../../assets/images/projects/Chill.jpg',
     imageFileName: 'Chill.jpg',
+    imageFilePath: require('../assets/images/projects/Chill.jpg'),
     url: 'https://xenodochial-wilson-4239db.netlify.app/',
     techIcons: [
       '../assets/images/tech/icon-javascript.png',
@@ -119,6 +126,7 @@ const projects = [
       'Interactive menu for a cozy restaurant, with the ability to place orders.',
     cardImagePath: '../../assets/images/projects/Perfectissimo.jpg',
     imageFileName: 'Perfectissimo.jpg',
+    imageFilePath: require('../assets/images/projects/Perfectissimo.jpg'),
     url: 'https://hopeful-roentgen-612fae.netlify.app/',
     techIcons: [
       '../assets/images/tech/icon-javascript.png',
@@ -134,6 +142,7 @@ const projects = [
       "A webpage providing an overview of the author's country of origin.",
     cardImagePath: '../../assets/images/projects/UntamedRomania.jpg',
     imageFileName: 'UntamedRomania.jpg',
+    imageFilePath: require('../assets/images/projects/UntamedRomania.jpg'),
     url: 'https://infallible-hodgkin-d8fc87.netlify.app/',
     techIcons: [
       '../assets/images/tech/icon-html5.png',
@@ -151,6 +160,7 @@ const projects = [
     cardImagePath: '../../assets/images/projects/BOBN.jpg',
     // cardImagePath: '../assets/images/projects/BOBN.jpg',
     imageFileName: 'BOBN.jpg',
+    imageFilePath: require('../assets/images/projects/BOBN.jpg'),
     url: 'https://pensive-jepsen-f44ba1.netlify.app',
     techIcons: [
       '../assets/images/tech/icon-html5.png',
@@ -165,6 +175,7 @@ const projects = [
     description: 'A simple calculator application in C#.',
     cardImagePath: '../assets/images/projects/Vladculator.jpg',
     imageFileName: 'Vladculator.jpg',
+    imageFilePath: require('../assets/images/projects/Vladculator.jpg'),
     url: '',
     techIcons: ['../assets/images/tech/icon-csharp.png'],
   },

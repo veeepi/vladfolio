@@ -9,9 +9,6 @@ const PROJECT_IMAGES_FILEPATH =
 export default function Tile({ project }) {
   const [hovered, setHovered] = useState(false);
 
-  // console.log(typeof (PROJECT_IMAGES_FILEPATH + project.imageFileName));
-  // const projectImage = require('../../assets/images/projects/BOBN.jpg');
-
   return (
     <div
       className="portfolioPage__tiles__tile"
@@ -47,12 +44,9 @@ export default function Tile({ project }) {
       ) : (
         <img
           className="portfolioPage__tiles__tile__info"
-          // src={projectImage}
-          // src={require('../../assets/images/projects/Checkmarks.jpg').default}
-          // src={require('../../assets/images/projects/Checkmarks.jpg')}
-          src={require(PROJECT_IMAGES_FILEPATH + project.imageFileName).default}
-          width="100"
-          height="100"
+          src={project.imageFilePath.default}
+          width="100%"
+          height="100%"
         />
       )}
     </div>
