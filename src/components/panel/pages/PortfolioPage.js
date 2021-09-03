@@ -1,6 +1,7 @@
 import React from 'react';
 import projects from '../../../data/Projects';
 import Tile from '../../custom/Tile';
+import { Scrollbars } from 'react-custom-scrollbars';
 
 export default function PortfolioPage() {
   return (
@@ -41,11 +42,13 @@ export default function PortfolioPage() {
         </form>
       </div>
 
-      <div className="portfolioPage__tiles">
-        {projects.map((item, index) => {
-          return <Tile project={item} key={index} />;
-        })}
-      </div>
+      <Scrollbars style={{ height: 300 }}>
+        <div className="portfolioPage__tiles">
+          {projects.map((item, index) => {
+            return <Tile project={item} key={index} />;
+          })}
+        </div>
+      </Scrollbars>
     </div>
   );
 }

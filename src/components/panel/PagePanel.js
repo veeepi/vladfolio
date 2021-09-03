@@ -5,7 +5,6 @@ import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
 import InteractPage from './pages/InteractPage';
 import PortfolioPage from './pages/PortfolioPage';
-import { Scrollbars } from 'react-custom-scrollbars';
 
 export default function PagePanel({ pageDisplayed, toggleDisplayPagePanel }) {
   const pageTitle = pages[pageDisplayed.id - 1].title;
@@ -33,12 +32,10 @@ export default function PagePanel({ pageDisplayed, toggleDisplayPagePanel }) {
 
       {/* This component should conditionally render other components */}
       <div className="pagePanel__body">
-        <Scrollbars style={{ width: 500, height: 300 }}>
-          {pageDisplayed.id === 1 && <InteractPage />}
-          {pageDisplayed.id === 2 && <AboutPage />}
-          {pageDisplayed.id === 3 && <ContactPage />}
-          {pageDisplayed.id === 4 && <PortfolioPage />}
-        </Scrollbars>
+        {pageDisplayed.id === 1 && <InteractPage />}
+        {pageDisplayed.id === 2 && <AboutPage />}
+        {pageDisplayed.id === 3 && <ContactPage />}
+        {pageDisplayed.id === 4 && <PortfolioPage />}
       </div>
     </div>
   );
