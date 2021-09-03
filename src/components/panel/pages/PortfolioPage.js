@@ -1,49 +1,26 @@
 import React from 'react';
 import projects from '../../../data/Projects';
+import techs from '../../../data/Techs';
 import Tile from '../../custom/Tile';
+import TechCheckbox from '../../custom/TechCheckbox';
 import { Scrollbars } from 'react-custom-scrollbars';
 
 export default function PortfolioPage() {
+  // const bodyHeight = window.innerHeight >
+
   return (
     <div className="portfolioPage">
       <div className="portfolioPage__filter">
+        <button>Expand</button>
         <form className="portfolioPage__filter__form">
-          <div className="portfolioPage__filter__form__item">
-            <label>Front-End</label>
-            <input
-              type="radio"
-              id="frontEnd"
-              name="portfolioItemType"
-              value=""
-              defaultChecked
-              className="portfolioPage__filter__form__item__input"
-            ></input>
-          </div>
-          <div className="portfolioPage__filter__form__item">
-            <label>Full-Stack</label>
-            <input
-              type="radio"
-              id="fullStack"
-              name="portfolioItemType"
-              value=""
-              className="portfolioPage__filter__form__item__input"
-            ></input>
-          </div>
-          <div className="portfolioPage__filter__form__item">
-            <label>Upcoming</label>
-            <input
-              type="radio"
-              id="upcoming"
-              name="portfolioItemType"
-              value=""
-              className="portfolioPage__filter__form__item__input"
-            ></input>
-          </div>
+          {techs.map((item, index) => {
+            return <TechCheckbox tech={item} key={index} />;
+          })}
         </form>
       </div>
 
-      <Scrollbars style={{ height: 300 }}>
-        <div className="portfolioPage__tiles">
+      <Scrollbars style={{ height: '79vh' }} className="portfolioPage__body">
+        <div className="portfolioPage__body__tiles">
           {projects.map((item, index) => {
             return <Tile project={item} key={index} />;
           })}
