@@ -26,6 +26,20 @@
     // padding: 3%;
     // margin-top: 8%;
     @include hoverGlow20;
+    &__expandButton {
+      width: 100%;
+      padding: 5%;
+      @include selectButton;
+    }
+    &__buttonContainer {
+      display: flex;
+      flex-direction: row;
+
+      &__button {
+        width: 50%;
+        @include selectButton;
+      }
+    }
   }
 
   &__body {
