@@ -8,11 +8,26 @@ import { Scrollbars } from 'react-custom-scrollbars';
 export default function PortfolioPage() {
   const [selectedTechs, setSelectedTechs] = useState(techs);
   const [displayedProjects, setDisplayedProjects] = useState(projects);
-  useEffect(() => {
-    // update displayedProjects, when selectedTechs change
-  }, [selectedTechs]);
 
-  console.log('selectedTechs: ', selectedTechs);
+  useEffect(() => {
+    let newDisplayedProjects = [];
+    // get array of tech names
+    let selectedTechNames = selectedTechs.map((tech) => {
+      return tech.name;
+    });
+
+    projects.forEach((project) => {
+      // match True if one element in array1(proj's techs) matches array2 (tech names selected)
+      const projectTechMatch = project.techs.some(
+        (r) => selectedTechNames.indexOf(r) >= 0
+      );
+      if (projectTechMatch) {
+        // add that project to new projects to display
+        newDisplayedProjects.push(project);
+      }
+    });
+    setDisplayedProjects(newDisplayedProjects);
+  }, [selectedTechs]);
 
   return (
     <div className="portfolioPage">
