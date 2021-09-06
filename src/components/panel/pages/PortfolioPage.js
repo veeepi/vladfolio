@@ -34,10 +34,7 @@ export default function PortfolioPage() {
 
   return (
     <div className="portfolioPage">
-      <Scrollbars
-        style={{ width: '28%', height: '79vh' }}
-        className="portfolioPage__filter"
-      >
+      <div className="portfolioPage__filter">
         <button className="portfolioPage__filter__expandButton">Expand</button>
         <div className="portfolioPage__filter__buttonContainer">
           <button
@@ -53,7 +50,10 @@ export default function PortfolioPage() {
             None
           </button>
         </div>
-        <form className="portfolioPage__filter__form">
+        <Scrollbars
+          style={{ height: '70vh' }}
+          className="portfolioPage__filter"
+        >
           {techTypes.map((type, index) => {
             return (
               <div>
@@ -80,8 +80,8 @@ export default function PortfolioPage() {
               </div>
             );
           })}
-        </form>
-      </Scrollbars>
+        </Scrollbars>
+      </div>
 
       <Scrollbars style={{ height: '79vh' }} className="portfolioPage__body">
         <div className="portfolioPage__body__tiles">

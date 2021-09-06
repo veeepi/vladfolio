@@ -17,7 +17,10 @@
   &__filter {
     font-family: 'RussoOne-Regular';
     font-size: 20px;
-    border-radius: 0 0 50px 0;
+    border-radius: 0 0 0 50px;
+    @media screen and (min-width: $min-width-tablet) {
+      border-radius: 0 0 50px 0;
+    }
     background: linear-gradient(
       45deg,
       rgba($mistblue, 0.8),
@@ -43,7 +46,10 @@
   }
 
   &__body {
-    border-radius: 0 0 0 50px;
+    border-radius: 0 0 50px 0;
+    @media screen and (min-width: $min-width-tablet) {
+      border-radius: 0 0 0 50px;
+    }
     height: 100%;
 
     &__tiles {
