@@ -15,7 +15,7 @@ export default function TechCheckbox({
         }
       });
     } else {
-      newTechsSelected = selectedTechs;
+      newTechsSelected.push(...selectedTechs);
       newTechsSelected.push(tech);
     }
     setSelectedTechs(newTechsSelected);
