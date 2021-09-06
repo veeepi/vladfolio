@@ -36,6 +36,10 @@ export default function PortfolioPage() {
     <div className="portfolioPage">
       <div className="portfolioPage__filter">
         <button>Expand</button>
+        <div>
+          <button onClick={() => setSelectedTechs(techs)}>All Tech</button>
+          <button onClick={() => setSelectedTechs([])}>None</button>
+        </div>
         <form className="portfolioPage__filter__form">
           {techTypes.map((type, index) => {
             return (
