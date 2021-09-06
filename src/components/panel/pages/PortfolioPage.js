@@ -4,8 +4,11 @@ import techs from '../../../data/Techs';
 import Tile from '../../custom/Tile';
 import TechCheckbox from '../../custom/TechCheckbox';
 import { Scrollbars } from 'react-custom-scrollbars';
+import { filterTechTypes } from '../../../utils/ArrayMaster';
 
 export default function PortfolioPage() {
+  const techTypes = filterTechTypes(techs);
+
   const [selectedTechs, setSelectedTechs] = useState(techs);
   const [displayedProjects, setDisplayedProjects] = useState(projects);
 
@@ -34,21 +37,30 @@ export default function PortfolioPage() {
       <div className="portfolioPage__filter">
         <button>Expand</button>
         <form className="portfolioPage__filter__form">
-          {techs.map((item, index) => {
-            let techSelected = false;
-            selectedTechs.forEach((element) => {
-              if (item.name === element.name) {
-                techSelected = true;
-              }
-            });
+          {techTypes.map((type, index) => {
             return (
-              <TechCheckbox
-                tech={item}
-                key={index}
-                techSelected={techSelected}
-                selectedTechs={selectedTechs}
-                setSelectedTechs={setSelectedTechs}
-              />
+              <div>
+                <h3>{type}</h3>
+                {techs.map((item, index) => {
+                  let techSelected = false;
+                  selectedTechs.forEach((element) => {
+                    if (item.name === element.name) {
+                      techSelected = true;
+                    }
+                  });
+                  if (item.type === type) {
+                    return (
+                      <TechCheckbox
+                        tech={item}
+                        key={index}
+                        techSelected={techSelected}
+                        selectedTechs={selectedTechs}
+                        setSelectedTechs={setSelectedTechs}
+                      />
+                    );
+                  }
+                })}
+              </div>
             );
           })}
         </form>
