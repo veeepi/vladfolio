@@ -109,7 +109,7 @@ const projects = [
     imageFileName: 'Shredz.jpg',
     imageFilePath: require('../assets/images/projects/Shredz.jpg'),
     url: 'https://lucid-hawking-f430e1.netlify.app/',
-    techs: ['HTML', 'CSS', 'SASS', 'Javascript'],
+    techs: ['HTML5', 'CSS', 'SASS', 'Javascript'],
     techIcons: [
       '../assets/images/tech/icon-html5.png',
       '../assets/images/tech/icon-sass.png',
@@ -145,7 +145,7 @@ const projects = [
     imageFilePath: require('../assets/images/projects/Perfectissimo.jpg'),
     url: 'https://hopeful-roentgen-612fae.netlify.app/',
     techs: ['Javascript', 'JQuery'],
-    techs: ['HTML', 'CSS', 'Javascript', 'JQuery'],
+    techs: ['HTML5', 'CSS', 'Javascript', 'JQuery'],
     techIcons: [
       '../assets/images/tech/icon-javascript.png',
       '../assets/images/tech/icon-jquery.jpg',
@@ -160,7 +160,7 @@ const projects = [
       "A webpage providing an overview of the author's country of origin.",
     cardImagePath: '../../assets/images/projects/UntamedRomania.jpg',
     imageFileName: 'UntamedRomania.jpg',
-    techs: ['HTML', 'CSS', 'SASS', 'Javascript', 'JQuery'],
+    techs: ['HTML5', 'CSS', 'SASS', 'Javascript', 'JQuery'],
     imageFilePath: require('../assets/images/projects/UntamedRomania.jpg'),
     url: 'https://infallible-hodgkin-d8fc87.netlify.app/',
     techIcons: [
@@ -179,7 +179,7 @@ const projects = [
     cardImagePath: '../../assets/images/projects/BOBN.jpg',
     imageFileName: 'BOBN.jpg',
     imageFilePath: require('../assets/images/projects/BOBN.jpg'),
-    techs: ['HTML', 'Bootstrap'],
+    techs: ['HTML5', 'Bootstrap'],
     url: 'https://pensive-jepsen-f44ba1.netlify.app',
     techIcons: [
       '../assets/images/tech/icon-html5.png',
