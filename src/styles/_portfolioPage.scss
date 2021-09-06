@@ -26,6 +26,20 @@
     // padding: 3%;
     // margin-top: 8%;
     @include hoverGlow20;
+    &__expandButton {
+      width: 100%;
+      padding: 5%;
+      @include selectButton;
+    }
+    &__buttonContainer {
+      display: flex;
+      flex-direction: row;
+
+      &__button {
+        width: 50%;
+        @include selectButton;
+      }
+    }
   }
 
   &__body {
@@ -33,10 +47,9 @@
     height: 100%;
 
     &__tiles {
-      border: 5px solid red;
-      // border: 5px solid red;
       background-color: $mistblue;
-      // display: flex;
+      display: flex;
+      flex-direction: column;
       // display: grid;
       // grid-template-columns: 100%;
       // margin-top: 5%;
@@ -55,8 +68,13 @@
       @include hoverGlow20;
 
       &__tile {
+        padding: 5%;
+        border: 20px solid red;
+        // height: 50%;
+
         @media screen and (min-width: $min-width-tablet) {
           height: 25vh;
+          // height: 800px;
         }
         @media screen and (min-width: $min-width-desktop) {
           height: 200px;
@@ -76,7 +94,9 @@
           box-shadow: 0 0 40px $warmorange;
         }
         &__info {
+          padding: 5%;
           cursor: default;
+          // height: 40vh;
           &__detail {
             margin: 10%;
             font-family: 'RussoOne-Regular';
