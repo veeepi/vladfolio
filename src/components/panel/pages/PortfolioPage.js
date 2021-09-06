@@ -34,7 +34,10 @@ export default function PortfolioPage() {
 
   return (
     <div className="portfolioPage">
-      <div className="portfolioPage__filter">
+      <Scrollbars
+        style={{ width: '28%', height: '79vh' }}
+        className="portfolioPage__filter"
+      >
         <button className="portfolioPage__filter__expandButton">Expand</button>
         <div className="portfolioPage__filter__buttonContainer">
           <button
@@ -78,7 +81,7 @@ export default function PortfolioPage() {
             );
           })}
         </form>
-      </div>
+      </Scrollbars>
 
       <Scrollbars style={{ height: '79vh' }} className="portfolioPage__body">
         <div className="portfolioPage__body__tiles">
