@@ -10,6 +10,7 @@ const projects = [
     imageFileName: 'Checkmarks.jpg',
     imageFilePath: require('../assets/images/projects/Checkmarks.jpg'),
     url: '',
+    techs: ['React', 'ASP.NET', 'SQL', 'Javascript', 'C-Sharp'],
     techIcons: [
       '../assets/images/tech/icon-react.png',
       '../assets/images/tech/icon-aspdotnet.png',
@@ -27,6 +28,7 @@ const projects = [
     imageFileName: 'Holistic.jpg',
     imageFilePath: require('../assets/images/projects/Holistic.jpg'),
     url: '',
+    techs: ['React', 'Firebase', 'Javascript'],
     techIcons: [
       '../assets/images/tech/icon-react.png',
       '../assets/images/tech/icon-firebase.png',
@@ -43,6 +45,16 @@ const projects = [
     imageFileName: 'Vladculator.jpg',
     imageFilePath: require('../assets/images/projects/Vladculator.jpg'),
     url: '',
+    techs: [
+      'React',
+      'NodeJS',
+      'MongoDB',
+      'Amazon Web Services',
+      'AWS Lambda',
+      'AWS API Gateway',
+      'AWS DynamoDB',
+      'AWS S3',
+    ],
     techIcons: [
       '../assets/images/tech/icon-react.png',
       '../assets/images/tech/icon-nodejs.png',
@@ -61,6 +73,7 @@ const projects = [
     imageFileName: 'Vladculator.jpg',
     imageFilePath: require('../assets/images/projects/Vladculator.jpg'),
     url: '',
+    techs: ['React-Native', 'Firebase', 'Javascript'],
     techIcons: [
       '../assets/images/tech/icon-react.png',
       '../assets/images/tech/icon-firebase.png',
@@ -78,6 +91,7 @@ const projects = [
     imageFileName: 'WishBucket.jpg',
     imageFilePath: require('../assets/images/projects/WishBucket.jpg'),
     url: 'https://wishbucket.netlify.app/',
+    techs: ['React', 'ASP.NET', 'SQL', 'C-Sharp', 'Javascript'],
     techIcons: [
       '../assets/images/tech/icon-react.png',
       '../assets/images/tech/icon-aspdotnet.png',
@@ -95,6 +109,7 @@ const projects = [
     imageFileName: 'Shredz.jpg',
     imageFilePath: require('../assets/images/projects/Shredz.jpg'),
     url: 'https://lucid-hawking-f430e1.netlify.app/',
+    techs: ['HTML', 'CSS', 'SASS', 'Javascript'],
     techIcons: [
       '../assets/images/tech/icon-html5.png',
       '../assets/images/tech/icon-sass.png',
@@ -112,6 +127,7 @@ const projects = [
     imageFileName: 'Chill.jpg',
     imageFilePath: require('../assets/images/projects/Chill.jpg'),
     url: 'https://xenodochial-wilson-4239db.netlify.app/',
+    techs: ['React', 'Javascript'],
     techIcons: [
       '../assets/images/tech/icon-javascript.png',
       '../assets/images/tech/icon-react.png',
@@ -128,6 +144,8 @@ const projects = [
     imageFileName: 'Perfectissimo.jpg',
     imageFilePath: require('../assets/images/projects/Perfectissimo.jpg'),
     url: 'https://hopeful-roentgen-612fae.netlify.app/',
+    techs: ['Javascript', 'JQuery'],
+    techs: ['HTML', 'CSS', 'Javascript', 'JQuery'],
     techIcons: [
       '../assets/images/tech/icon-javascript.png',
       '../assets/images/tech/icon-jquery.jpg',
@@ -142,6 +160,7 @@ const projects = [
       "A webpage providing an overview of the author's country of origin.",
     cardImagePath: '../../assets/images/projects/UntamedRomania.jpg',
     imageFileName: 'UntamedRomania.jpg',
+    techs: ['HTML', 'CSS', 'SASS', 'Javascript', 'JQuery'],
     imageFilePath: require('../assets/images/projects/UntamedRomania.jpg'),
     url: 'https://infallible-hodgkin-d8fc87.netlify.app/',
     techIcons: [
@@ -158,9 +177,9 @@ const projects = [
     title: 'Bears of Bad News',
     description: 'A webpage for a local news paper.',
     cardImagePath: '../../assets/images/projects/BOBN.jpg',
-    // cardImagePath: '../assets/images/projects/BOBN.jpg',
     imageFileName: 'BOBN.jpg',
     imageFilePath: require('../assets/images/projects/BOBN.jpg'),
+    techs: ['HTML', 'Bootstrap'],
     url: 'https://pensive-jepsen-f44ba1.netlify.app',
     techIcons: [
       '../assets/images/tech/icon-html5.png',
@@ -177,6 +196,7 @@ const projects = [
     imageFileName: 'Vladculator.jpg',
     imageFilePath: require('../assets/images/projects/Vladculator.jpg'),
     url: '',
+    techs: ['C-Sharp'],
     techIcons: ['../assets/images/tech/icon-csharp.png'],
   },
 ];

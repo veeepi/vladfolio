@@ -25,6 +25,11 @@ const techs = [
     imageFilePath: require('../assets/images/tech/icon-react.png'),
   },
   {
+    name: 'React-Native',
+    type: 'framework',
+    imageFilePath: require('../assets/images/tech/icon-react-native.png'),
+  },
+  {
     name: 'JQuery',
     type: 'framework',
     imageFilePath: require('../assets/images/tech/icon-jquery.jpg'),
@@ -83,6 +88,11 @@ const techs = [
     name: 'AWS DynamoDB',
     type: 'cloud services',
     imageFilePath: require('../assets/images/tech/icon-aws-dynamodb.png'),
+  },
+  {
+    name: 'AWS S3',
+    type: 'cloud services',
+    imageFilePath: require('../assets/images/tech/icon-aws-s3.png'),
   },
 ];
 
