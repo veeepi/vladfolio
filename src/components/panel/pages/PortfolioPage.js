@@ -50,11 +50,26 @@ export default function PortfolioPage() {
             None
           </button>
         </div>
-        <form className="portfolioPage__filter__form">
+        <Scrollbars
+          style={{ height: '1vh', overflowX: 'hidden' }}
+          renderTrackHorizontal={(props) => (
+            <div
+              {...props}
+              style={{ display: 'none' }}
+              className="track-horizontal"
+            />
+          )}
+          className="portfolioPage__filter__selectContainer"
+        >
           {techTypes.map((type, index) => {
             return (
-              <div>
-                <h3>{type}</h3>
+              <div
+                key={index}
+                className="portfolioPage__filter__selectContainer__category"
+              >
+                <h3 className="portfolioPage__filter__selectContainer__category__title">
+                  {type}
+                </h3>
                 {techs.map((item, index) => {
                   let techSelected = false;
                   selectedTechs.forEach((element) => {
@@ -77,7 +92,7 @@ export default function PortfolioPage() {
               </div>
             );
           })}
-        </form>
+        </Scrollbars>
       </div>
 
       <Scrollbars style={{ height: '79vh' }} className="portfolioPage__body">

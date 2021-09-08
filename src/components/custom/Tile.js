@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { debounce } from 'lodash';
+import { Scrollbars } from 'react-custom-scrollbars';
 // import projectImage from '../../assets/images/projects/BOBN.jpg';
 
 require('dotenv').config();
@@ -11,39 +12,58 @@ export default function Tile({ project }) {
 
   return (
     <div
-      className="portfolioPage__tiles__tile"
-      onMouseOver={debounce(() => setHovered(true), 200)}
-      onMouseOut={debounce(() => setHovered(false), 200)}
+      className="portfolioPage__body__tiles__tile"
+      onMouseOver={debounce(() => setHovered(true), 100)}
+      onMouseOut={debounce(() => setHovered(false), 100)}
     >
       {hovered ? (
-        <div className="portfolioPage__tiles__tile__info">
+        <div className="portfolioPage__body__tiles__tile__info">
+          {/*  */}
           <h3
             id="portfolioItem_title"
-            className="portfolioPage__tiles__tile__info__detail"
+            className="portfolioPage__body__tiles__tile__info__title"
           >
             <a
               href={project.url}
               id="portfolioItem_url"
-              className="portfolioPage__tiles__tile__info__detail__link"
+              className="portfolioPage__body__tiles__tile__info__title__link"
             >
               {project.title}
             </a>
           </h3>
-          <p>
-            {project.techIcons?.map((tech, index) => (
-              <img src={tech} width={'50px'} />
-            ))}
-          </p>
-          <p
-            id="portfolioItem_description"
-            className="portfolioPage__tiles__tile__info__detail"
+
+          {/*  */}
+          <Scrollbars
+            style={{ height: '1vh' }}
+            className="portfolioPage__body__tiles__tile__info__description"
           >
-            {project.description}
+            <p
+              id="portfolioItem_description"
+              className="portfolioPage__body__tiles__tile__info__description__text"
+            >
+              {project.description}
+            </p>
+          </Scrollbars>
+
+          {/*  */}
+          <p
+            id="portfolioItem_techIcons"
+            className="portfolioPage__body__tiles__tile__info__techIcons"
+          >
+            {project.techIcons?.map((tech, index) => (
+              <img
+                key={index}
+                src={tech.default}
+                width={'30px'}
+                height={'30px'}
+                className="portfolioPage__body__tiles__tile__info__techIcons__icon"
+              />
+            ))}
           </p>
         </div>
       ) : (
         <img
-          className="portfolioPage__tiles__tile__info"
+          className="portfolioPage__body__tiles__tile__image"
           src={project.imageFilePath.default}
           width="100%"
           height="100%"

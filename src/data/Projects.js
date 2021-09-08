@@ -5,16 +5,16 @@ const projects = [
     status: 'active',
     title: 'Checkmarks',
     description:
-      'Trademark Registration Application for a local Law Firm, integrated with 3rd party services (Clio, LawPay). React front-end and ASP.NET server-side.',
+      'User friendly Trademark registration application for a local BC law firm. Search the CIPO database and submit comprehensive application to law firm, using 3rd paprty integrations (Clio, LawPay). ',
     cardImagePath: '../../assets/images/projects/Checkmarks.jpg',
     imageFileName: 'Checkmarks.jpg',
     imageFilePath: require('../assets/images/projects/Checkmarks.jpg'),
     url: '',
     techs: ['React', 'ASP.NET', 'SQL', 'Javascript', 'C-Sharp'],
     techIcons: [
-      '../assets/images/tech/icon-react.png',
-      '../assets/images/tech/icon-aspdotnet.png',
-      '../assets/images/tech/icon-sql.png',
+      require('../assets/images/tech/icon-react.png'),
+      require('../assets/images/tech/icon-aspdotnet.png'),
+      require('../assets/images/tech/icon-sql.png'),
     ],
   },
   {
@@ -23,15 +23,15 @@ const projects = [
     status: 'active',
     title: 'Holistic',
     description:
-      'Fitness coach CRM for managing client relationships and schedule. Built with React, using Firestore Authentication and Firestore database.',
+      'Fitness coach CRM for managing client relationships and session scheduling.',
     cardImagePath: '../../assets/images/projects/Holistic.jpg',
     imageFileName: 'Holistic.jpg',
     imageFilePath: require('../assets/images/projects/Holistic.jpg'),
     url: '',
     techs: ['React', 'Firebase', 'Javascript'],
     techIcons: [
-      '../assets/images/tech/icon-react.png',
-      '../assets/images/tech/icon-firebase.png',
+      require('../assets/images/tech/icon-react.png'),
+      require('../assets/images/tech/icon-firebase.png'),
     ],
   },
   {
@@ -40,7 +40,7 @@ const projects = [
     status: 'active',
     title: 'Moist-Speak',
     description:
-      'Social Media application, built with React and using AWS Lambda, API Gateway and DynamoDB.',
+      'Social Media application with political theme. Implements expected functionality, such as posts (image and text), comments, likes and vote.',
     cardImagePath: '../../assets/images/projects/Vladculator.jpg',
     imageFileName: 'Vladculator.jpg',
     imageFilePath: require('../assets/images/projects/Vladculator.jpg'),
@@ -56,10 +56,10 @@ const projects = [
       'AWS S3',
     ],
     techIcons: [
-      '../assets/images/tech/icon-react.png',
-      '../assets/images/tech/icon-nodejs.png',
-      '../assets/images/tech/icon-mongodb.png',
-      '../assets/images/tech/icon-aws.png',
+      require('../assets/images/tech/icon-react.png'),
+      require('../assets/images/tech/icon-nodejs.png'),
+      require('../assets/images/tech/icon-mongodb.png'),
+      require('../assets/images/tech/icon-aws.png'),
     ],
   },
   {
@@ -68,15 +68,15 @@ const projects = [
     status: 'active',
     title: 'Diamond Hands',
     description:
-      'Stock trading app, built with React-Native, consuming Stock Price API, with Firebase Authentication and Firestore database.',
+      'Stock trading app using the Finnhub.io API, allowing authenticated users to manage a Stock Portfolio, buy/sell stocks and keep a stock Watchlist.',
     cardImagePath: '../../assets/images/projects/Vladculator.jpg',
     imageFileName: 'Vladculator.jpg',
     imageFilePath: require('../assets/images/projects/Vladculator.jpg'),
     url: '',
     techs: ['React-Native', 'Firebase', 'Javascript'],
     techIcons: [
-      '../assets/images/tech/icon-react.png',
-      '../assets/images/tech/icon-firebase.png',
+      require('../assets/images/tech/icon-react.png'),
+      require('../assets/images/tech/icon-firebase.png'),
     ],
   },
 
@@ -86,16 +86,16 @@ const projects = [
     status: 'active',
     title: 'WishBucket',
     description:
-      'Full-Stack App build with ASP.NET and React.js., impleneting User Authentication and CRUD operations with a live database. Users can view, create, edit and delete wishlists and items.',
+      'Full-Stack App allowing users to create, edit, share and delete wishlists.',
     cardImagePath: '../../assets/images/projects/WishBucket.jpg',
     imageFileName: 'WishBucket.jpg',
     imageFilePath: require('../assets/images/projects/WishBucket.jpg'),
     url: 'https://wishbucket.netlify.app/',
     techs: ['React', 'ASP.NET', 'SQL', 'C-Sharp', 'Javascript'],
     techIcons: [
-      '../assets/images/tech/icon-react.png',
-      '../assets/images/tech/icon-aspdotnet.png',
-      '../assets/images/tech/icon-sql.png',
+      require('../assets/images/tech/icon-react.png'),
+      require('../assets/images/tech/icon-aspdotnet.png'),
+      require('../assets/images/tech/icon-sql.png'),
     ],
   },
   {
@@ -111,9 +111,9 @@ const projects = [
     url: 'https://lucid-hawking-f430e1.netlify.app/',
     techs: ['HTML5', 'CSS', 'SASS', 'Javascript'],
     techIcons: [
-      '../assets/images/tech/icon-html5.png',
-      '../assets/images/tech/icon-sass.png',
-      '../assets/images/tech/icon-javascript.png',
+      require('../assets/images/tech/icon-html5.png'),
+      require('../assets/images/tech/icon-sass.png'),
+      require('../assets/images/tech/icon-javascript.png'),
     ],
   },
   {
@@ -122,15 +122,15 @@ const projects = [
     status: 'active',
     title: 'CHILL',
     description:
-      "Front-end React.js app which connects to The Movie Database's (TMDb) API",
+      'Front-end application consuming The Movie Database (TMDb) API, displaying movies matching selected criteria.',
     cardImagePath: '../../assets/images/projects/Chill.jpg',
     imageFileName: 'Chill.jpg',
     imageFilePath: require('../assets/images/projects/Chill.jpg'),
     url: 'https://xenodochial-wilson-4239db.netlify.app/',
     techs: ['React', 'Javascript'],
     techIcons: [
-      '../assets/images/tech/icon-javascript.png',
-      '../assets/images/tech/icon-react.png',
+      require('../assets/images/tech/icon-javascript.png'),
+      require('../assets/images/tech/icon-react.png'),
     ],
   },
   {
@@ -138,8 +138,7 @@ const projects = [
     id: 4,
     status: 'active',
     title: 'perfectissimo',
-    description:
-      'Interactive menu for a cozy restaurant, with the ability to place orders.',
+    description: 'Interactive menu for a cozy restaurant.',
     cardImagePath: '../../assets/images/projects/Perfectissimo.jpg',
     imageFileName: 'Perfectissimo.jpg',
     imageFilePath: require('../assets/images/projects/Perfectissimo.jpg'),
@@ -147,8 +146,8 @@ const projects = [
     techs: ['Javascript', 'JQuery'],
     techs: ['HTML5', 'CSS', 'Javascript', 'JQuery'],
     techIcons: [
-      '../assets/images/tech/icon-javascript.png',
-      '../assets/images/tech/icon-jquery.jpg',
+      require('../assets/images/tech/icon-javascript.png'),
+      require('../assets/images/tech/icon-jquery.jpg'),
     ],
   },
   {
@@ -156,18 +155,17 @@ const projects = [
     id: 3,
     status: 'active',
     title: 'Untamed Romania',
-    description:
-      "A webpage providing an overview of the author's country of origin.",
+    description: "A webpage showcasing the author's country of origin.",
     cardImagePath: '../../assets/images/projects/UntamedRomania.jpg',
     imageFileName: 'UntamedRomania.jpg',
     techs: ['HTML5', 'CSS', 'SASS', 'Javascript', 'JQuery'],
     imageFilePath: require('../assets/images/projects/UntamedRomania.jpg'),
     url: 'https://infallible-hodgkin-d8fc87.netlify.app/',
     techIcons: [
-      '../assets/images/tech/icon-html5.png',
-      '../assets/images/tech/icon-sass.png',
-      '../assets/images/tech/icon-javascript.png',
-      '../assets/images/tech/icon-jquery.jpg',
+      require('../assets/images/tech/icon-html5.png'),
+      require('../assets/images/tech/icon-sass.png'),
+      require('../assets/images/tech/icon-javascript.png'),
+      require('../assets/images/tech/icon-jquery.jpg'),
     ],
   },
   {
@@ -175,15 +173,15 @@ const projects = [
     id: 2,
     status: 'active',
     title: 'Bears of Bad News',
-    description: 'A webpage for a local news paper.',
+    description: 'A webpage for a local fake news paper.',
     cardImagePath: '../../assets/images/projects/BOBN.jpg',
     imageFileName: 'BOBN.jpg',
     imageFilePath: require('../assets/images/projects/BOBN.jpg'),
     techs: ['HTML5', 'Bootstrap'],
     url: 'https://pensive-jepsen-f44ba1.netlify.app',
     techIcons: [
-      '../assets/images/tech/icon-html5.png',
-      '../assets/images/tech/icon-bootstrap.png',
+      require('../assets/images/tech/icon-html5.png'),
+      require('../assets/images/tech/icon-bootstrap.png'),
     ],
   },
   {
@@ -197,7 +195,7 @@ const projects = [
     imageFilePath: require('../assets/images/projects/Vladculator.jpg'),
     url: '',
     techs: ['C-Sharp'],
-    techIcons: ['../assets/images/tech/icon-csharp.png'],
+    techIcons: [require('../assets/images/tech/icon-csharp.png')],
   },
 ];
 export default projects;

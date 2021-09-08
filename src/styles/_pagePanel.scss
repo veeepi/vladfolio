@@ -1,6 +1,9 @@
 .pagePanel {
   z-index: $zi_pagePanel;
   border-radius: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   position: absolute;
   background-color: $mistblue;
   width: 90%;
