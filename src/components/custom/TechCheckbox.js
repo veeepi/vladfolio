@@ -22,14 +22,19 @@ export default function TechCheckbox({
   };
 
   return (
-    <div className="portfolioPage__filter__form__item">
-      <img src={tech.imageFilePath.default} alt={tech.name} height="20px" />
+    <div className="techCheckbox">
+      <img
+        src={tech.imageFilePath.default}
+        alt={tech.name}
+        height="20px"
+        className="techCheckbox__image"
+      />
       <input
         type="checkbox"
         checked={techSelected}
         onChange={handleTechCheckbox}
-        className="portfolioPage__filter__form__item__input"
-      ></input>
+        className="techCheckbox__input"
+      />
     </div>
   );
 }
