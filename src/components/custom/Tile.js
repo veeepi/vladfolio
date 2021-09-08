@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { debounce } from 'lodash';
+import { Scrollbars } from 'react-custom-scrollbars';
 // import projectImage from '../../assets/images/projects/BOBN.jpg';
 
 require('dotenv').config();
@@ -32,12 +33,17 @@ export default function Tile({ project }) {
           </h3>
 
           {/*  */}
-          <p
-            id="portfolioItem_description"
+          <Scrollbars
+            style={{ height: '1vh' }}
             className="portfolioPage__body__tiles__tile__info__description"
           >
-            {project.description}
-          </p>
+            <p
+              id="portfolioItem_description"
+              className="portfolioPage__body__tiles__tile__info__description__text"
+            >
+              {project.description}
+            </p>
+          </Scrollbars>
 
           {/*  */}
           <p
