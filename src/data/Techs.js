@@ -66,32 +66,32 @@ const techs = [
   },
   {
     name: 'Firebase',
-    type: 'cloud services',
+    type: 'cloud',
     imageFilePath: require('../assets/images/tech/icon-firebase.png'),
   },
   {
     name: 'Amazon Web Services',
-    type: 'cloud services',
+    type: 'cloud',
     imageFilePath: require('../assets/images/tech/icon-aws.png'),
   },
   {
     name: 'AWS Lambda',
-    type: 'cloud services',
+    type: 'cloud',
     imageFilePath: require('../assets/images/tech/icon-aws-lambda.png'),
   },
   {
     name: 'AWS API Gateway',
-    type: 'cloud services',
+    type: 'cloud',
     imageFilePath: require('../assets/images/tech/icon-aws-apigateway.png'),
   },
   {
     name: 'AWS DynamoDB',
-    type: 'cloud services',
+    type: 'cloud',
     imageFilePath: require('../assets/images/tech/icon-aws-dynamodb.png'),
   },
   {
     name: 'AWS S3',
-    type: 'cloud services',
+    type: 'cloud',
     imageFilePath: require('../assets/images/tech/icon-aws-s3.png'),
   },
 ];
