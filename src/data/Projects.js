@@ -12,9 +12,9 @@ const projects = [
     url: '',
     techs: ['React', 'ASP.NET', 'SQL', 'Javascript', 'C-Sharp'],
     techIcons: [
-      '../assets/images/tech/icon-react.png',
-      '../assets/images/tech/icon-aspdotnet.png',
-      '../assets/images/tech/icon-sql.png',
+      require('../assets/images/tech/icon-react.png'),
+      require('../assets/images/tech/icon-aspdotnet.png'),
+      require('../assets/images/tech/icon-sql.png'),
     ],
   },
   {
@@ -30,8 +30,8 @@ const projects = [
     url: '',
     techs: ['React', 'Firebase', 'Javascript'],
     techIcons: [
-      '../assets/images/tech/icon-react.png',
-      '../assets/images/tech/icon-firebase.png',
+      require('../assets/images/tech/icon-react.png'),
+      require('../assets/images/tech/icon-firebase.png'),
     ],
   },
   {
@@ -56,10 +56,10 @@ const projects = [
       'AWS S3',
     ],
     techIcons: [
-      '../assets/images/tech/icon-react.png',
-      '../assets/images/tech/icon-nodejs.png',
-      '../assets/images/tech/icon-mongodb.png',
-      '../assets/images/tech/icon-aws.png',
+      require('../assets/images/tech/icon-react.png'),
+      require('../assets/images/tech/icon-nodejs.png'),
+      require('../assets/images/tech/icon-mongodb.png'),
+      require('../assets/images/tech/icon-aws.png'),
     ],
   },
   {
@@ -75,8 +75,8 @@ const projects = [
     url: '',
     techs: ['React-Native', 'Firebase', 'Javascript'],
     techIcons: [
-      '../assets/images/tech/icon-react.png',
-      '../assets/images/tech/icon-firebase.png',
+      require('../assets/images/tech/icon-react.png'),
+      require('../assets/images/tech/icon-firebase.png'),
     ],
   },
 
@@ -93,9 +93,9 @@ const projects = [
     url: 'https://wishbucket.netlify.app/',
     techs: ['React', 'ASP.NET', 'SQL', 'C-Sharp', 'Javascript'],
     techIcons: [
-      '../assets/images/tech/icon-react.png',
-      '../assets/images/tech/icon-aspdotnet.png',
-      '../assets/images/tech/icon-sql.png',
+      require('../assets/images/tech/icon-react.png'),
+      require('../assets/images/tech/icon-aspdotnet.png'),
+      require('../assets/images/tech/icon-sql.png'),
     ],
   },
   {
@@ -111,9 +111,9 @@ const projects = [
     url: 'https://lucid-hawking-f430e1.netlify.app/',
     techs: ['HTML5', 'CSS', 'SASS', 'Javascript'],
     techIcons: [
-      '../assets/images/tech/icon-html5.png',
-      '../assets/images/tech/icon-sass.png',
-      '../assets/images/tech/icon-javascript.png',
+      require('../assets/images/tech/icon-html5.png'),
+      require('../assets/images/tech/icon-sass.png'),
+      require('../assets/images/tech/icon-javascript.png'),
     ],
   },
   {
@@ -129,8 +129,8 @@ const projects = [
     url: 'https://xenodochial-wilson-4239db.netlify.app/',
     techs: ['React', 'Javascript'],
     techIcons: [
-      '../assets/images/tech/icon-javascript.png',
-      '../assets/images/tech/icon-react.png',
+      require('../assets/images/tech/icon-javascript.png'),
+      require('../assets/images/tech/icon-react.png'),
     ],
   },
   {
@@ -147,8 +147,8 @@ const projects = [
     techs: ['Javascript', 'JQuery'],
     techs: ['HTML5', 'CSS', 'Javascript', 'JQuery'],
     techIcons: [
-      '../assets/images/tech/icon-javascript.png',
-      '../assets/images/tech/icon-jquery.jpg',
+      require('../assets/images/tech/icon-javascript.png'),
+      require('../assets/images/tech/icon-jquery.jpg'),
     ],
   },
   {
@@ -164,10 +164,10 @@ const projects = [
     imageFilePath: require('../assets/images/projects/UntamedRomania.jpg'),
     url: 'https://infallible-hodgkin-d8fc87.netlify.app/',
     techIcons: [
-      '../assets/images/tech/icon-html5.png',
-      '../assets/images/tech/icon-sass.png',
-      '../assets/images/tech/icon-javascript.png',
-      '../assets/images/tech/icon-jquery.jpg',
+      require('../assets/images/tech/icon-html5.png'),
+      require('../assets/images/tech/icon-sass.png'),
+      require('../assets/images/tech/icon-javascript.png'),
+      require('../assets/images/tech/icon-jquery.jpg'),
     ],
   },
   {
@@ -182,8 +182,8 @@ const projects = [
     techs: ['HTML5', 'Bootstrap'],
     url: 'https://pensive-jepsen-f44ba1.netlify.app',
     techIcons: [
-      '../assets/images/tech/icon-html5.png',
-      '../assets/images/tech/icon-bootstrap.png',
+      require('../assets/images/tech/icon-html5.png'),
+      require('../assets/images/tech/icon-bootstrap.png'),
     ],
   },
   {
@@ -197,7 +197,7 @@ const projects = [
     imageFilePath: require('../assets/images/projects/Vladculator.jpg'),
     url: '',
     techs: ['C-Sharp'],
-    techIcons: ['../assets/images/tech/icon-csharp.png'],
+    techIcons: [require('../assets/images/tech/icon-csharp.png')],
   },
 ];
 export default projects;

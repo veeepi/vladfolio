@@ -31,7 +31,7 @@ export default function Tile({ project }) {
           </h3>
           <p>
             {project.techIcons?.map((tech, index) => (
-              <img src={tech} width={'50px'} />
+              <img key={index} src={tech.default} width={'25px'} />
             ))}
           </p>
           <p
