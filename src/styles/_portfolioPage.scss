@@ -4,13 +4,15 @@
   display: flex;
   flex-direction: row;
   margin: auto;
-  width: 98%;
+  width: 100%;
   min-height: 50vh;
   @media screen and (min-width: $min-width-tablet) {
     flex-direction: row-reverse;
   }
 
   &__filter {
+    display: flex;
+    flex-direction: column;
     font-family: 'RussoOne-Regular';
     font-size: 20px;
     border-radius: 0 0 0 50px;
@@ -27,6 +29,7 @@
     @include hoverGlow20;
     &__expandButton {
       width: 100%;
+
       padding: 5%;
       @include selectButton;
     }
@@ -37,6 +40,19 @@
       &__button {
         width: 50%;
         @include selectButton;
+      }
+    }
+    &__selectContainer {
+      flex: 1;
+      margin-bottom: 20px;
+      // height: 100%;
+      // margin-top: auto;
+      &__category {
+        border-top: 2px solid $warmorange;
+        margin: 5px;
+        &__title {
+          font-size: 16px;
+        }
       }
     }
   }
@@ -59,7 +75,7 @@
 
       @media screen and (min-width: $min-width-desktop) {
         display: grid;
-        grid-template-columns: 33% 33% 33%;
+        grid-template-columns: 33.3% 33.3% 33.3%;
       }
       @include hoverGlow20;
 
@@ -88,24 +104,39 @@
           box-shadow: 0 0 40px $warmorange;
         }
         &__image {
-          // object-fit: none;
+          object-fit: cover;
+          object-position: left;
         }
         &__info {
-          // padding: 5%;
+          height: 100%;
           cursor: default;
-          // height: 40vh;
-          &__detail {
-            margin: 10%;
-            font-family: 'RussoOne-Regular';
-
-            #portfolioItem_url {
+          display: flex;
+          flex-direction: column;
+          &__title {
+            height: 15%;
+            margin: 10px;
+            &__link {
               font-size: 24px;
+              font-family: 'RussoOne-Regular';
               color: $darkest-warmorange;
               text-decoration: none;
               @include hoverGlow20;
             }
-            #portfolioItem_description {
-              font-family: 'RussoOne-Regular';
+          }
+          &__description {
+            font-family: 'RussoOne-Regular';
+            height: 70%;
+            margin: 0 2%;
+          }
+          &__techIcons {
+            background-color: $light-mistblue;
+            border-radius: 15px;
+            display: flex;
+            height: 20%;
+            justify-content: center;
+            margin: 10px 2% 20px 2%;
+            &__icon {
+              margin: 2%;
             }
           }
         }

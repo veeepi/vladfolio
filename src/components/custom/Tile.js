@@ -12,33 +12,47 @@ export default function Tile({ project }) {
   return (
     <div
       className="portfolioPage__body__tiles__tile"
-      onMouseOver={debounce(() => setHovered(true), 200)}
-      onMouseOut={debounce(() => setHovered(false), 200)}
+      onMouseOver={debounce(() => setHovered(true), 100)}
+      onMouseOut={debounce(() => setHovered(false), 100)}
     >
       {hovered ? (
         <div className="portfolioPage__body__tiles__tile__info">
+          {/*  */}
           <h3
             id="portfolioItem_title"
-            className="portfolioPage__body__tiles__tile__info__detail"
+            className="portfolioPage__body__tiles__tile__info__title"
           >
             <a
               href={project.url}
               id="portfolioItem_url"
-              className="portfolioPage__body__tiles__tile__info__detail__link"
+              className="portfolioPage__body__tiles__tile__info__title__link"
             >
               {project.title}
             </a>
           </h3>
-          <p>
-            {project.techIcons?.map((tech, index) => (
-              <img key={index} src={tech.default} width={'25px'} />
-            ))}
-          </p>
+
+          {/*  */}
           <p
             id="portfolioItem_description"
-            className="portfolioPage__body__tiles__tile__info__detail"
+            className="portfolioPage__body__tiles__tile__info__description"
           >
             {project.description}
+          </p>
+
+          {/*  */}
+          <p
+            id="portfolioItem_techIcons"
+            className="portfolioPage__body__tiles__tile__info__techIcons"
+          >
+            {project.techIcons?.map((tech, index) => (
+              <img
+                key={index}
+                src={tech.default}
+                width={'30px'}
+                height={'30px'}
+                className="portfolioPage__body__tiles__tile__info__techIcons__icon"
+              />
+            ))}
           </p>
         </div>
       ) : (

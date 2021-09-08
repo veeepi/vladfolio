@@ -51,13 +51,25 @@ export default function PortfolioPage() {
           </button>
         </div>
         <Scrollbars
-          style={{ height: '70vh' }}
-          className="portfolioPage__filter"
+          style={{ height: '1vh', overflowX: 'hidden' }}
+          renderTrackHorizontal={(props) => (
+            <div
+              {...props}
+              style={{ display: 'none' }}
+              className="track-horizontal"
+            />
+          )}
+          className="portfolioPage__filter__selectContainer"
         >
           {techTypes.map((type, index) => {
             return (
-              <div>
-                <h3>{type}</h3>
+              <div
+                key={index}
+                className="portfolioPage__filter__selectContainer__category"
+              >
+                <h3 className="portfolioPage__filter__selectContainer__category__title">
+                  {type}
+                </h3>
                 {techs.map((item, index) => {
                   let techSelected = false;
                   selectedTechs.forEach((element) => {
