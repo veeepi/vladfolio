@@ -1,15 +1,11 @@
 //  Portfolio Page styling
 
 .portfolioPage {
-  // background-color: $mistblue;
   display: flex;
   flex-direction: row;
   margin: auto;
   width: 98%;
   min-height: 50vh;
-  // height: 100%;
-  // overflow: scroll;
-
   @media screen and (min-width: $min-width-tablet) {
     flex-direction: row-reverse;
   }
@@ -50,17 +46,11 @@
     @media screen and (min-width: $min-width-tablet) {
       border-radius: 0 0 0 50px;
     }
-    height: 100%;
 
     &__tiles {
       background-color: $mistblue;
       display: flex;
       flex-direction: column;
-      // display: grid;
-      // grid-template-columns: 100%;
-      // margin-top: 5%;
-
-      // height: 100%;
 
       @media screen and (min-width: $min-width-tablet) {
         display: grid;
@@ -69,23 +59,21 @@
 
       @media screen and (min-width: $min-width-desktop) {
         display: grid;
-        grid-template-columns: 25% 25% 25% 25%;
+        grid-template-columns: 33% 33% 33%;
       }
       @include hoverGlow20;
 
       &__tile {
-        padding: 5%;
-        border: 20px solid red;
-        // height: 50%;
-
+        border: 0.1px solid $warmorange;
+        min-height: 24vh;
+        height: 75vw;
         @media screen and (min-width: $min-width-tablet) {
-          height: 25vh;
-          // height: 800px;
+          height: 35vw;
         }
         @media screen and (min-width: $min-width-desktop) {
-          height: 200px;
+          height: 20vw;
         }
-        height: 40vh;
+
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -99,8 +87,11 @@
           outline-width: thick;
           box-shadow: 0 0 40px $warmorange;
         }
+        &__image {
+          // object-fit: none;
+        }
         &__info {
-          padding: 5%;
+          // padding: 5%;
           cursor: default;
           // height: 40vh;
           &__detail {
@@ -109,9 +100,7 @@
 
             #portfolioItem_url {
               font-size: 24px;
-
-              // color: $darkest-warmorange;
-              color: $darkest-mistblue;
+              color: $darkest-warmorange;
               text-decoration: none;
               @include hoverGlow20;
             }

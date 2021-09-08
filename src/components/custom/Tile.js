@@ -11,20 +11,20 @@ export default function Tile({ project }) {
 
   return (
     <div
-      className="portfolioPage__tiles__tile"
+      className="portfolioPage__body__tiles__tile"
       onMouseOver={debounce(() => setHovered(true), 200)}
       onMouseOut={debounce(() => setHovered(false), 200)}
     >
       {hovered ? (
-        <div className="portfolioPage__tiles__tile__info">
+        <div className="portfolioPage__body__tiles__tile__info">
           <h3
             id="portfolioItem_title"
-            className="portfolioPage__tiles__tile__info__detail"
+            className="portfolioPage__body__tiles__tile__info__detail"
           >
             <a
               href={project.url}
               id="portfolioItem_url"
-              className="portfolioPage__tiles__tile__info__detail__link"
+              className="portfolioPage__body__tiles__tile__info__detail__link"
             >
               {project.title}
             </a>
@@ -36,14 +36,14 @@ export default function Tile({ project }) {
           </p>
           <p
             id="portfolioItem_description"
-            className="portfolioPage__tiles__tile__info__detail"
+            className="portfolioPage__body__tiles__tile__info__detail"
           >
             {project.description}
           </p>
         </div>
       ) : (
         <img
-          className="portfolioPage__tiles__tile__info"
+          className="portfolioPage__body__tiles__tile__image"
           src={project.imageFilePath.default}
           width="100%"
           height="100%"
