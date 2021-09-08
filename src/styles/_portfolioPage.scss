@@ -24,12 +24,9 @@
       rgba($mistblue, 0.8),
       rgba($mistblue, 0.4)
     );
-    // padding: 3%;
-    // margin-top: 8%;
     @include hoverGlow20;
     &__expandButton {
       width: 100%;
-
       padding: 5%;
       @include selectButton;
     }
@@ -113,7 +110,6 @@
           display: flex;
           flex-direction: column;
           &__title {
-            height: 15%;
             margin: 10px;
             &__link {
               font-size: 24px;
@@ -124,17 +120,27 @@
             }
           }
           &__description {
+            flex: 1;
+            // align-items: center;
             font-family: 'RussoOne-Regular';
-            height: 70%;
-            margin: 0 2%;
+            &__text {
+              font-size: 0.9em;
+              margin: 0 2.5%;
+              width: 95%;
+              align-items: center;
+              @media screen and (min-width: $max-width-tablet) {
+                font-size: 1.1em;
+              }
+            }
+            flex: 1;
+            text-align: left;
           }
           &__techIcons {
             background-color: $light-mistblue;
             border-radius: 15px;
             display: flex;
-            height: 20%;
             justify-content: center;
-            margin: 10px 2% 20px 2%;
+            margin: 10px 2% 10px 2%;
             &__icon {
               margin: 2%;
             }
