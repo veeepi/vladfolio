@@ -12,19 +12,21 @@ export default function AboutPage() {
           View/Download Resume
         </a>
       </div>
-      <Scrollbars style={{ height: 300 }}>
-        <div className="aboutPage__intro">
+      <Scrollbars style={{ height: '70vh' }} className="aboutPage__body">
+        <div className="aboutPage__body__intro">
           <img
-            src="img/aboutPage_intro2.jpg"
-            className="aboutPage__intro__image"
+            src={
+              require('../../../assets/images/about/about_intro.jpg').default
+            }
+            className="aboutPage__body__intro__image"
             width="90%"
             // height="100%"
           />
-          <div className="aboutPage__intro__narrative">
-            <h1 className="aboutPage__intro__narrative__greet">
+          <div className="aboutPage__body__intro__narrative">
+            <h1 className="aboutPage__body__intro__narrative__greet">
               Hi, my name is Vlad.
             </h1>
-            <p className="aboutPage__intro__narrative__textbox">
+            <p className="aboutPage__body__intro__narrative__textbox">
               <br />I like to think big, and to simplify life's problems. My
               professional and life experience awakened a passion for utilizing
               the magic of programming towards solving problems in creative
@@ -40,10 +42,13 @@ export default function AboutPage() {
             <br />
           </div>
         </div>
-        <div className="aboutPage__skills">
-          <div className="aboutPage__skills__column">
-            <h1 className="aboutPage__skills__column__heading">Front-End</h1>
-            <div className="aboutPage__skills__column__body">
+
+        <div className="aboutPage__body__skills">
+          <div className="aboutPage__body__skills__column">
+            <h1 className="aboutPage__body__skills__column__heading">
+              Front-End
+            </h1>
+            <div className="aboutPage__body__skills__column__body">
               <ul>
                 <li>HTML, CSS/SASS</li>
                 <li>Bootstrap</li>
@@ -51,13 +56,15 @@ export default function AboutPage() {
                 <li>React.js, React-Native, Angular</li>
               </ul>
             </div>
-            <div className="aboutPage__skills__column__tools"></div>
+            <div className="aboutPage__body__skills__column__tools"></div>
           </div>
-          <div className="aboutPage__skills__column">
-            <div className="aboutPage__skills__column__heading">
-              <h1 className="aboutPage__skills__column__heading">Back-End</h1>
+          <div className="aboutPage__body__skills__column">
+            <div className="aboutPage__body__skills__column__heading">
+              <h1 className="aboutPage__body__skills__column__heading">
+                Back-End
+              </h1>
             </div>
-            <div className="aboutPage__skills__column__body">
+            <div className="aboutPage__body__skills__column__body">
               <ul>
                 <li>C#, Java, Ruby, Python</li>
                 <li>SQL, MQL</li>
@@ -65,45 +72,42 @@ export default function AboutPage() {
               </ul>
             </div>
           </div>
-          {/* <div className="aboutPage__skills__column">
-						<div className="aboutPage__skills__column__heading"></div>
-						<div className="aboutPage__skills__column__body"></div>
-					</div> */}
         </div>
-        <div className="aboutPage__experience">
-          <div className="aboutPage__experience__section">
+
+        <div className="aboutPage__body__experience">
+          <div className="aboutPage__body__experience__section">
             <h1>Education</h1>
-            <h3 className="aboutPage__experience__section__title">
+            <h3 className="aboutPage__body__experience__section__title">
               British Columbia Institute of Technology
             </h3>
-            <h4 className="aboutPage__experience__section__description">
+            <h4 className="aboutPage__body__experience__section__description">
               Software Systems Developer Certification
             </h4>
             <br />
 
-            <h3 className="aboutPage__experience__section__title">
+            <h3 className="aboutPage__body__experience__section__title">
               University of British Columbia
             </h3>
-            <h4 className="aboutPage__experience__section__description">
+            <h4 className="aboutPage__body__experience__section__description">
               Bachelor of Arts Degree - Major in Mathematics, Minor in Economics
             </h4>
           </div>
 
-          <div className="aboutPage__experience__section">
-            <h1 className="aboutPage__experience__section__title">
+          <div className="aboutPage__body__experience__section">
+            <h1 className="aboutPage__body__experience__section__title">
               Recent Work Experience
             </h1>
-            <h3 className="aboutPage__experience__section__subject">
+            <h3 className="aboutPage__body__experience__section__subject">
               Douglas College
             </h3>
-            <h4 className="aboutPage__experience__section__description">
+            <h4 className="aboutPage__body__experience__section__description">
               Accounting &amp; Finance
             </h4>
             <br />
-            <h3 className="aboutPage__experience__section__subject">
+            <h3 className="aboutPage__body__experience__section__subject">
               Paladin Security Group Ltd.
             </h3>
-            <h4 className="aboutPage__experience__section__description">
+            <h4 className="aboutPage__body__experience__section__description">
               Accounting &amp; Finance
             </h4>
           </div>
