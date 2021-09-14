@@ -3,7 +3,6 @@
 .portfolioPage {
   display: flex;
   flex-direction: row;
-  margin: auto;
   width: 100%;
   min-height: 50vh;
   @media screen and (min-width: $min-width-tablet) {
@@ -55,6 +54,7 @@
   }
 
   &__body {
+    // flex: 1;
     border-radius: 0 0 50px 0;
     @media screen and (min-width: $min-width-tablet) {
       border-radius: 0 0 0 50px;
