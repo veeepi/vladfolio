@@ -24,14 +24,18 @@ export default function AboutPage() {
           />
           <div className="aboutPage__body__intro__narrative">
             <h1 className="aboutPage__body__intro__narrative__greet">
-              Hi, my name is Vlad.
+              Hello, my name is
             </h1>
+            <h1 className="aboutPage__body__intro__narrative__greetName">
+              Vlad Preduna
+            </h1>
+            <br />
             <p className="aboutPage__body__intro__narrative__textbox">
-              <br />I like to think big, and to simplify life's problems. My
-              professional and life experience awakened a passion for utilizing
-              the magic of programming towards solving problems in creative
-              ways.
+              I'm a full-stack web &amp; mobile developer.
             </p>
+            <br />
+            <p>Let's solve problems beautifully.</p>
+            {/* <br />
             <p>
               I currently possess 7 years of experience in Accounting &amp;
               Finance in both private and public sector. However, my passion for
@@ -39,7 +43,7 @@ export default function AboutPage() {
               training through the British Columbia Institute of Technology
               simultaneous to employment.
             </p>
-            <br />
+            <br /> */}
           </div>
         </div>
 
