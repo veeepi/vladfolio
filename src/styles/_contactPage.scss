@@ -120,4 +120,52 @@
       }
     }
   }
+  &__sentMessage {
+    font-size: 32px;
+  }
+  &__sendAnotherButton {
+    border: none;
+    color: white;
+    padding: 1% 10%;
+    margin: 2% auto;
+    width: 40%;
+    @media screen and (min-width: $min-width-tablet) {
+      margin: 8% auto;
+    }
+    font-size: 1.4em;
+    border-radius: 10px;
+    cursor: pointer;
+    background: linear-gradient(
+      20deg,
+      rgba(200, 125, 45, 1) 0%,
+      rgba(218, 135, 70, 1) 30%,
+      rgba(220, 140, 65, 1) 40%,
+      rgba(235, 145, 55, 1) 50%,
+      rgba(235, 145, 55, 1) 65%,
+      rgba(235, 145, 55, 1) 75%,
+      rgba(240, 195, 150, 1) 90%
+    );
+    &:hover {
+      box-shadow: 0 0 20px #ddd;
+      // outline-style: solid;
+      // outline-color: $dark-mistblue;
+      // outline-width: thick;
+      color: $dark-mistblue;
+      background: linear-gradient(
+        20deg,
+        rgba(238, 165, 100, 1) 0%,
+        rgba(239, 175, 120, 1) 30%,
+        rgba(240, 185, 140, 1) 40%,
+        rgba(241, 195, 160, 1) 50%,
+        rgba(243, 205, 180, 1) 65%,
+        rgba(245, 215, 200, 1) 75%,
+        rgba(250, 218, 210, 1) 85%,
+        rgba(255, 220, 220, 1) 90%
+      );
+    }
+    -webkit-transition: all 250ms ease-out;
+    -moz-transition: all 250ms ease-out;
+    -o-transition: all 250ms ease-out;
+    transition: all 250ms ease-out;
+  }
 }
