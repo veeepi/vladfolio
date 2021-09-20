@@ -1,5 +1,11 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import {
+  AiFillLinkedin,
+  AiOutlineGithub,
+  AiFillFacebook,
+  AiOutlineMail,
+} from 'react-icons/ai';
 
 export default function ContactPage() {
   const [mailSent, setMailSent] = useState(false);
@@ -100,12 +106,16 @@ export default function ContactPage() {
           </form>
         )}
       </div>
-      {/* <div className="contactPage__social">
-					<AiOutlineMail size={36} className="contactPage__social__icon"/>
-					<AiFillLinkedin size={36} className="contactPage__social__icon" />
-					<AiOutlineGithub size={36} className="contactPage__social__icon"/>
-					<AiFillFacebook size={36} className="contactPage__social__icon" />
-				</div> */}
+      <div className="contactPage__social">
+        {/* <AiOutlineMail size={36} className="contactPage__social__icon" /> */}
+        <a href="https://www.linkedin.com/in/vlad-preduna/">
+          <AiFillLinkedin size={52} className="contactPage__social__icon" />
+        </a>
+        <a href="https://github.com/veeepi">
+          <AiOutlineGithub size={52} className="contactPage__social__icon" />
+        </a>
+        {/* <AiFillFacebook size={36} className="contactPage__social__icon" /> */}
+      </div>
     </div>
   );
 }
