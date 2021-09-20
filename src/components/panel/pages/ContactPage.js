@@ -32,6 +32,19 @@ export default function ContactPage() {
 
   return (
     <div className="contactPage">
+      <div className="contactPage__intro">
+        <p className="contactPage__intro__p">
+          Complete and Submit the form below, and I will receive an email with
+          your information.
+        </p>
+        <p className="contactPage__intro__p">
+          Powered by my NodeJS app{' '}
+          <a href="https://github.com/veeepi/nodefire-contact">
+            nodefire_contact
+          </a>{' '}
+          implemetning Nodemailer.
+        </p>
+      </div>
       <div className="contactPage__section">
         {mailSent ? (
           <div>
