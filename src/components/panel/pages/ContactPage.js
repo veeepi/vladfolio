@@ -39,7 +39,7 @@ export default function ContactPage() {
         </p>
         <p className="contactPage__intro__p">
           Powered by my NodeJS app{' '}
-          <a href="https://github.com/veeepi/nodefire-contact">
+          <a href="https://github.com/veeepi/nodefire-contact" target="_blank">
             nodefire_contact
           </a>{' '}
           implemetning Nodemailer.
@@ -121,10 +121,10 @@ export default function ContactPage() {
       </div>
       <div className="contactPage__social">
         {/* <AiOutlineMail size={36} className="contactPage__social__icon" /> */}
-        <a href="https://www.linkedin.com/in/vlad-preduna/">
+        <a href="https://www.linkedin.com/in/vlad-preduna/" target="_blank">
           <AiFillLinkedin size={52} className="contactPage__social__icon" />
         </a>
-        <a href="https://github.com/veeepi">
+        <a href="https://github.com/veeepi" target="_blank">
           <AiOutlineGithub size={52} className="contactPage__social__icon" />
         </a>
         {/* <AiFillFacebook size={36} className="contactPage__social__icon" /> */}
