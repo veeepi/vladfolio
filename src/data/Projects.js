@@ -143,7 +143,6 @@ const projects = [
     imageFileName: 'Perfectissimo.jpg',
     imageFilePath: require('../assets/images/projects/Perfectissimo.jpg'),
     url: 'https://hopeful-roentgen-612fae.netlify.app/',
-    techs: ['Javascript', 'JQuery'],
     techs: ['HTML5', 'CSS', 'Javascript', 'JQuery'],
     techIcons: [
       require('../assets/images/tech/icon-javascript.png'),

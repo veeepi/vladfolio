@@ -1,11 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import {
-  AiFillLinkedin,
-  AiOutlineGithub,
-  AiFillFacebook,
-  AiOutlineMail,
-} from 'react-icons/ai';
+import { AiFillLinkedin, AiOutlineGithub } from 'react-icons/ai';
 
 export default function ContactPage() {
   const [mailSent, setMailSent] = useState(false);
@@ -39,7 +34,11 @@ export default function ContactPage() {
         </p>
         <p className="contactPage__intro__p">
           Powered by my NodeJS app{' '}
-          <a href="https://github.com/veeepi/nodefire-contact" target="_blank">
+          <a
+            href="https://github.com/veeepi/nodefire-contact"
+            rel="noreferrer"
+            target="_blank"
+          >
             "nodefire_contact"
           </a>{' '}
           implemetning Nodemailer.
@@ -121,10 +120,14 @@ export default function ContactPage() {
       </div>
       <div className="contactPage__social">
         {/* <AiOutlineMail size={36} className="contactPage__social__icon" /> */}
-        <a href="https://www.linkedin.com/in/vlad-preduna/" target="_blank">
+        <a
+          href="https://www.linkedin.com/in/vlad-preduna/"
+          target="_blank"
+          rel="noreferrer"
+        >
           <AiFillLinkedin size={52} className="contactPage__social__icon" />
         </a>
-        <a href="https://github.com/veeepi" target="_blank">
+        <a href="https://github.com/veeepi" target="_blank" rel="noreferrer">
           <AiOutlineGithub size={52} className="contactPage__social__icon" />
         </a>
         {/* <AiFillFacebook size={36} className="contactPage__social__icon" /> */}

@@ -13,16 +13,14 @@ export default function Quadrant({ pageId }) {
       <div className="quadrant__tile"></div>
 
       <div className="quadrant__tile"></div>
-      <div className="quadrant__tile" nowrap>
+      <div className="quadrant__tile">
         {/* CENTER */}
-        <div className="quadrant__dragPrompt" id={'dragPrompt' + pageId} nowrap>
-          {/* <p className="quadrant__dragPrompt__text" nowrap> */}
+        <div className="quadrant__dragPrompt" id={'dragPrompt' + pageId}>
           <span id="dragPromptText_D">{'D'}</span>
           <span id="dragPromptText_R">{'R'}</span>
           <span id="dragPromptText_A">{'A'}</span>
           <span id="dragPromptText_G">{'G'}</span>
           <span className="quadrant__dragPrompt__arrow">{'>>>'}</span>
-          {/* </p> */}
         </div>
       </div>
       <div className="quadrant__tile"></div>

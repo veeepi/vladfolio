@@ -10,11 +10,7 @@ export default function CloseButton({ toggleDisplayPagePanel }) {
         toggleDisplayPagePanel();
       }}
     >
-      <CgClose
-        className="pagePanel__heading__close__icon"
-        color="white"
-        size={32}
-      />
+      <CgClose className="pagePanel__heading__close__icon" size={32} />
     </button>
   );
 }

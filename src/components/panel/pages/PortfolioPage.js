@@ -87,6 +87,8 @@ export default function PortfolioPage() {
                         setSelectedTechs={setSelectedTechs}
                       />
                     );
+                  } else {
+                    return null;
                   }
                 })}
               </div>
