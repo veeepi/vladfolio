@@ -1,4 +1,5 @@
 import React from 'react';
+import { CgClose } from 'react-icons/cg';
 
 export default function CloseButton({ toggleDisplayPagePanel }) {
   return (
@@ -9,7 +10,7 @@ export default function CloseButton({ toggleDisplayPagePanel }) {
         toggleDisplayPagePanel();
       }}
     >
-      {/* <GrClose className="pagePanel__close__X" size={32} /> */}
+      <CgClose className="pagePanel__heading__close__icon" size={32} />
     </button>
   );
 }

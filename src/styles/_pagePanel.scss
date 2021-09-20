@@ -7,6 +7,7 @@
   position: absolute;
   background-color: $mistblue;
   width: 90%;
+
   // margin: auto;
   // max-width: 800px;
   height: 90%;
@@ -50,17 +51,12 @@
       margin-left: auto;
       margin-top: 10px;
       margin-right: 10px;
-      //   justify-content: flex-end;
       z-index: $zi_closeButton;
-      // position: absolute;
       width: 60px;
       height: 60px;
       border-radius: 50%;
       border: none;
-      //   top: 15vh;
-      //   right: 4%;
       cursor: pointer;
-
       background-image: radial-gradient(
         closest-side at 50% 50%,
         rgba(235, 185, 85, 1) 25%,
@@ -79,8 +75,8 @@
           rgba(235, 145, 55, 1)
         );
       }
-
-      &__X {
+      &__icon {
+        color: white;
         margin: auto;
       }
     }
@@ -88,7 +84,5 @@
 
   &__body {
     display: flex;
-    // flex: 1;
-    // width: 100%;
   }
 }

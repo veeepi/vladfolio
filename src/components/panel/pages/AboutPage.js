@@ -18,6 +18,7 @@ export default function AboutPage() {
             src={
               require('../../../assets/images/about/about_intro.jpg').default
             }
+            alt="author"
             className="aboutPage__body__intro__image"
             width="90%"
             // height="100%"
