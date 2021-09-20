@@ -1,27 +1,40 @@
 .contactPage {
   font-family: 'RussoOne-Regular';
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
   width: 100%;
+  margin: auto;
+  width: 95%;
   &__section {
     border: 2px solid $mistblue;
     border-radius: 35px;
-    margin: auto 15px 15px 15px;
-    width: 95%;
     &__form {
       margin-top: 10%;
       margin-left: auto;
       margin-right: auto;
-      width: 65%;
+      width: 85%;
+      @media screen and (min-width: $min-width-tablet) {
+        width: 75%;
+        font-size: 20px;
+      }
+      // width: 85%;
       &__field {
         display: flex;
         flex-direction: column;
 
         &__label {
+          font-size: 1.1em;
           margin-bottom: 1.5%;
           text-align: left;
         }
         &__input {
+          width: 100%;
+          padding: 4px;
+          font-size: 14px;
+          @media screen and (min-width: $min-width-tablet) {
+            font-size: 20px;
+          }
           border: none;
           border-radius: 7px;
           @include hoverGlow20;
@@ -77,20 +90,19 @@
         transition: all 250ms ease-out;
       }
     }
-    &__social {
-      // margin: auto;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-evenly;
-
-      &__icon {
-        cursor: pointer;
-        border-radius: 50%;
-        @include hoverGlow20;
-        padding: 2%;
-        &:hover {
-          color: $warmorange;
-        }
+  }
+  &__social {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 15% 5% 5% 5%;
+    &__icon {
+      cursor: pointer;
+      border-radius: 50%;
+      @include hoverGlow20;
+      padding: 2%;
+      color: white;
+      &:hover {
+        color: $warmorange;
       }
     }
   }
