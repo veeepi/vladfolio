@@ -40,7 +40,7 @@ export default function ContactPage() {
         <p className="contactPage__intro__p">
           Powered by my NodeJS app{' '}
           <a href="https://github.com/veeepi/nodefire-contact" target="_blank">
-            nodefire_contact
+            "nodefire_contact"
           </a>{' '}
           implemetning Nodemailer.
         </p>
