@@ -42,6 +42,7 @@ function App() {
 
   return (
     <div className="App">
+      <div className="Background__fog"></div>
       <DragSourceContext.Provider value={{ toggleAButtonIsDragging }}>
         <DragTargetContext.Provider value={{ updateSelectedPage }}>
           <DndProvider backend={isMobile ? TouchBackend : HTML5Backend}>
