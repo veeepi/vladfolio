@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { useDrag } from 'react-dnd';
 // import { ItemTypes } from '../utils/items';
-// import { GiBarbedSun } from 'react-icons/gi';
+import { GiBarbedSun } from 'react-icons/gi';
 import { DragSourceContext } from '../../App';
 
 // Drag Source
@@ -27,7 +27,7 @@ const DragButton = (props) => {
       id={'dragButton' + props.pageId}
     >
       {isDragging && toggleAButtonIsDragging()}
-      {/* <GiBarbedSun className="quadrant__dragbutton__icon" /> */}
+      <GiBarbedSun className="quadrant__dragbutton__icon" />
     </div>
   );
 };
