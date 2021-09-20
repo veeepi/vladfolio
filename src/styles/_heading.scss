@@ -1,94 +1,93 @@
 .heading {
-	position: absolute;
-	z-index: $zi-heading;
+  z-index: $zi-heading;
 
-	&__title {
-		width: 100%;
-		font-family: 'Archaic-Roman';
-		font-weight: 300;
-		background-clip: text;
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		-webkit-text-stroke: none; // 1.1px linear-gradient($dark-mistblue, white);
-		@media screen and (min-width: $min-width-tablet) {
-			font-size: 7.3em;
-			left: 2.5vw;
-			top: 4.2vh;
-		}
-		#vlad {
-			position: absolute;
-			top: 10px;
-			transform: rotate(-5deg);
-			font-size: 3.1em;
-			text-shadow: 0px 0px 2.8px rgba(255, 255, 255, 0.43);
-			@media screen and (min-width: $min-width-tablet) {
-				font-size: 1em;
-				left: 0px;
-				top: 0px;
-			}
-		}
-		#preduna {
-			position: absolute;
-			top: 12px;
-			left: 129px;
-			transform: rotate(-4deg);
-			font-size: 2.7em;
-			text-shadow: 0px 0px 1.8px rgba(255, 255, 255, 0.43);
-			@media screen and (min-width: $min-width-tablet) {
-				font-size: 0.8em;
-				left: 300px;
-				top: 15px;
-			}
-		}
-	}
+  &__title {
+    width: 100%;
+    font-family: 'Archaic-Roman';
+    font-weight: 300;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: none; // 1.1px linear-gradient($dark-mistblue, white);
+    @media screen and (min-width: $min-width-tablet) {
+      font-size: 7.3em;
+      left: 2.5vw;
+      top: 4.2vh;
+    }
+    #vlad {
+      position: absolute;
+      top: 10px;
+      transform: rotate(-5deg);
+      font-size: 3.1em;
+      text-shadow: 0px 0px 2.8px rgba(255, 255, 255, 0.43);
+      @media screen and (min-width: $min-width-tablet) {
+        font-size: 1em;
+        left: 0px;
+        top: 0px;
+      }
+    }
+    #preduna {
+      position: absolute;
+      top: 12px;
+      left: 129px;
+      transform: rotate(-4deg);
+      font-size: 2.7em;
+      text-shadow: 0px 0px 1.8px rgba(255, 255, 255, 0.43);
+      @media screen and (min-width: $min-width-tablet) {
+        font-size: 0.8em;
+        left: 300px;
+        top: 15px;
+      }
+    }
+  }
 
-	&__subtitle {
-		display: flex;
-		flex-direction: column;
-		margin-top: 50%;
-		&__item {
-			position: absolute;
-			font-size: 1.8em;
-			opacity: 0.5;
-			text-shadow: 30px 50px 5px rgba(255, 255, 255, 1);
-			font-family: 'NorseBold';
-			transform: rotate(-3deg);
-			@media screen and (min-width: $min-width-tablet) {
-				font-size: 2.2em;
-				// padding: 10%;
-			}
-		}
-		#full {
-			top: 9vh;
-			left: 25vw;
-			@media screen and (min-width: $min-width-tablet) {
-				top: 11vh;
-				left: 35vw;
-			}
-		}
-		#stack {
-			top: 9.5vh;
-			left: 39.8vw;
-			@media screen and (min-width: $min-width-tablet) {
-				top: 11.2vh;
-				left: 49vw;
-			}
-		}
-		#web {
-			top: 9.6vh;
-			left: 56.9vw;
-			@media screen and (min-width: $min-width-tablet) {
-				top: 11.4vh;
-				left: 64vw;
-			}
-		}
-		#dev {
-			top: 9.9vh;
-			left: 69vw;
-			@media screen and (min-width: $min-width-tablet) {
-				top: 11.6vh;
-				left: 74vw;
-			}
-		}
-	}
+  &__subtitle {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50%;
+    &__item {
+      position: absolute;
+      font-size: 1.8em;
+      opacity: 0.5;
+      text-shadow: 30px 50px 5px rgba(255, 255, 255, 1);
+      font-family: 'NorseBold';
+      transform: rotate(-3deg);
+      @media screen and (min-width: $min-width-tablet) {
+        font-size: 2.2em;
+        // padding: 10%;
+      }
+    }
+    #full {
+      top: 9vh;
+      left: 25vw;
+      @media screen and (min-width: $min-width-tablet) {
+        top: 11vh;
+        left: 35vw;
+      }
+    }
+    #stack {
+      top: 9.5vh;
+      left: 39.8vw;
+      @media screen and (min-width: $min-width-tablet) {
+        top: 11.2vh;
+        left: 49vw;
+      }
+    }
+    #web {
+      top: 9.6vh;
+      left: 56.9vw;
+      @media screen and (min-width: $min-width-tablet) {
+        top: 11.4vh;
+        left: 64vw;
+      }
+    }
+    #dev {
+      top: 9.9vh;
+      left: 69vw;
+      @media screen and (min-width: $min-width-tablet) {
+        top: 11.6vh;
+        left: 74vw;
+      }
+    }
+  }
 }
