@@ -1,7 +1,6 @@
 import React from 'react';
 import QuadrantHeading from './QuadrantHeading';
 import DragButton from '../dnd/DragButton';
-import pages from '../../data/Pages';
 
 export default function Quadrant({ pageId }) {
   return (
@@ -14,16 +13,16 @@ export default function Quadrant({ pageId }) {
       <div className="quadrant__tile"></div>
 
       <div className="quadrant__tile"></div>
-      <div className="quadrant__tile">
+      <div className="quadrant__tile" nowrap>
         {/* CENTER */}
-        <div className="quadrant__dragPrompt" id={'dragPrompt' + pageId}>
-          <span className="quadrant__dragPrompt__text">
-            <span id="dragPromptText_D">{'D'}</span>
-            <span id="dragPromptText_R">{'R'}</span>
-            <span id="dragPromptText_A">{'A'}</span>
-            <span id="dragPromptText_G">{'G'}</span>
-          </span>
+        <div className="quadrant__dragPrompt" id={'dragPrompt' + pageId} nowrap>
+          {/* <p className="quadrant__dragPrompt__text" nowrap> */}
+          <span id="dragPromptText_D">{'D'}</span>
+          <span id="dragPromptText_R">{'R'}</span>
+          <span id="dragPromptText_A">{'A'}</span>
+          <span id="dragPromptText_G">{'G'}</span>
           <span className="quadrant__dragPrompt__arrow">{'>>>'}</span>
+          {/* </p> */}
         </div>
       </div>
       <div className="quadrant__tile"></div>

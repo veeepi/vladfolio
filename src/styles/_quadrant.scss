@@ -1,60 +1,64 @@
 #dragButton1 {
+  // display: none;
   left: 25%;
-  top: 15%;
+  top: 25%;
 }
 #dragButton2 {
-  left: 35%;
-  top: 15%;
+  // display: none;
+  // left: 35%;
+  right: 25%;
+  top: 25%;
 }
 #dragButton3 {
+  // display: none;
   left: 25%;
-  top: 40%;
+  // top: 40%;
+  bottom: 25%;
 }
 #dragButton4 {
-  left: 35%;
-  top: 40%;
+  // display: none;
+  right: 25%;
+  bottom: 25%;
 }
 
 #dragPrompt1 {
-  // position: absolute;
-  // left: 42%;
-  // top: 68%;
-  margin-left: 200px;
-  // transform: translate(200px, 500px);
-  transform: rotate(52deg);
+  transform: rotate(45deg);
+  position: absolute;
+  left: 20%;
+  top: 100%;
   @media screen and (min-width: $min-width-tablet) {
-    // left: 50%;
-    // top: 60%;
+    left: 10%;
+    top: 80%;
   }
 }
 #dragPrompt2 {
-  // position: absolute;
-  // left: -10%;
-  // top: 68%;
-  transform: rotate(128deg);
+  transform: rotate(-45deg) scaleX(-1);
+  position: absolute;
+  right: 20%;
+  top: 100%;
   @media screen and (min-width: $min-width-tablet) {
-    // left: 15%;
-    // top: 60%;
+    right: 10%;
+    top: 80%;
   }
 }
 #dragPrompt3 {
-  // position: absolute;
-  // left: 42%;
-  // top: 12%;
-  transform: rotate(-52deg);
+  transform: rotate(-45deg);
+  position: absolute;
+  left: 20%;
+  bottom: 100%;
   @media screen and (min-width: $min-width-tablet) {
-    // left: 50%;
-    // top: 25%;
+    left: 10%;
+    bottom: 80%;
   }
 }
 #dragPrompt4 {
-  // position: absolute;
-  // left: -10%;
-  // top: 12%;
-  transform: rotate(-128deg);
+  transform: rotate(45deg) scaleX(-1);
+  position: absolute;
+  right: 20%;
+  bottom: 100%;
   @media screen and (min-width: $min-width-tablet) {
-    // left: 15%;
-    // top: 25%;
+    right: 10%;
+    bottom: 80%;
   }
 }
 
@@ -85,7 +89,6 @@
     font-family: sans-serif;
     text-transform: uppercase;
     letter-spacing: 1px;
-    overflow: hidden;
     background: linear-gradient(90deg, $mistblue, #fff, $mistblue);
     background-repeat: no-repeat;
     background-size: 80%;
@@ -94,38 +97,35 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: $mistblue;
     text-align: center;
-
-    &__arrow {
+    font-size: 1.3em;
+    #dragPromptText_D {
+      font-size: 1.2em;
+      @media screen and (min-width: $min-width-tablet) {
+        font-size: 1.9em;
+      }
+    }
+    #dragPromptText_R {
       font-size: 1.1em;
       @media screen and (min-width: $min-width-tablet) {
         font-size: 1.7em;
       }
     }
-    &__text {
-      font-size: 1.3em;
-      #dragPromptText_D {
-        font-size: 1.2em;
-        @media screen and (min-width: $min-width-tablet) {
-          font-size: 1.9em;
-        }
+    #dragPromptText_A {
+      font-size: 1em;
+      @media screen and (min-width: $min-width-tablet) {
+        font-size: 1.5em;
       }
-      #dragPromptText_R {
-        font-size: 1.1em;
-        @media screen and (min-width: $min-width-tablet) {
-          font-size: 1.7em;
-        }
+    }
+    #dragPromptText_G {
+      font-size: 0.9em;
+      @media screen and (min-width: $min-width-tablet) {
+        font-size: 1.3em;
       }
-      #dragPromptText_A {
-        font-size: 1em;
-        @media screen and (min-width: $min-width-tablet) {
-          font-size: 1.5em;
-        }
-      }
-      #dragPromptText_G {
-        font-size: 0.9em;
-        @media screen and (min-width: $min-width-tablet) {
-          font-size: 1.3em;
-        }
+    }
+    &__arrow {
+      font-size: 1.1em;
+      @media screen and (min-width: $min-width-tablet) {
+        font-size: 1.7em;
       }
     }
   }
