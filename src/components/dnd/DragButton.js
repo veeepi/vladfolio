@@ -1,12 +1,13 @@
-import React, { useContext } from 'react';
+// import React, { useContext } from 'react';
+import React from 'react';
 import { useDrag } from 'react-dnd';
 // import { ItemTypes } from '../utils/items';
 import { GiBarbedSun } from 'react-icons/gi';
-import { DragSourceContext } from '../../App';
+// import { DragSourceContext } from '../../App';
 
 // Drag Source
 const DragButton = (props) => {
-  const { toggleAButtonIsDragging } = useContext(DragSourceContext);
+  // const { toggleAButtonIsDragging } = useContext(DragSourceContext);
 
   const [{ isDragging }, drag] = useDrag({
     type: 'pagePanel',
@@ -26,7 +27,7 @@ const DragButton = (props) => {
       className="quadrant__dragbutton"
       id={'dragButton' + props.pageId}
     >
-      {isDragging && toggleAButtonIsDragging()}
+      {/* {isDragging && toggleAButtonIsDragging()} */}
       <GiBarbedSun className="quadrant__dragbutton__icon" />
     </div>
   );
