@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { debounce } from 'lodash';
 import { Scrollbars } from 'react-custom-scrollbars';
-// import projectImage from '../../assets/images/projects/BOBN.jpg';
-
+import { AiOutlineGithub } from 'react-icons/ai';
 require('dotenv').config();
 
 export default function Tile({ project }) {
@@ -25,8 +24,19 @@ export default function Tile({ project }) {
               href={project.url}
               id="portfolioItem_url"
               className="portfolioPage__body__tiles__tile__info__title__link"
+              target="_blank"
+              rel="noreferrer"
             >
               {project.title}
+            </a>
+            <a
+              href={project.url_gitHub}
+              id="portfolioItem_url"
+              className="portfolioPage__body__tiles__tile__info__title__link"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <AiOutlineGithub size={32} />
             </a>
           </h3>
 
@@ -44,7 +54,7 @@ export default function Tile({ project }) {
           </Scrollbars>
 
           {/*  */}
-          <p
+          <div
             id="portfolioItem_techIcons"
             className="portfolioPage__body__tiles__tile__info__techIcons"
           >
@@ -58,7 +68,7 @@ export default function Tile({ project }) {
                 className="portfolioPage__body__tiles__tile__info__techIcons__icon"
               />
             ))}
-          </p>
+          </div>
         </div>
       ) : (
         <img
