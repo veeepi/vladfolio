@@ -9,7 +9,8 @@ const projects = [
     cardImagePath: '../../assets/images/projects/Checkmarks.jpg',
     imageFileName: 'Checkmarks.jpg',
     imageFilePath: require('../assets/images/projects/Checkmarks.jpg'),
-    url: '',
+    url: 'https://heuristic-easley-6f0a2b.netlify.app',
+    url_gitHub: 'https://github.com/veeepi/checkmarks_frontend',
     techs: ['React', 'ASP.NET', 'SQL', 'Javascript', 'C-Sharp'],
     techIcons: [
       require('../assets/images/tech/icon-react.png'),
@@ -27,7 +28,8 @@ const projects = [
     cardImagePath: '../../assets/images/projects/Holistic.jpg',
     imageFileName: 'Holistic.jpg',
     imageFilePath: require('../assets/images/projects/Holistic.jpg'),
-    url: '',
+    url: 'https://holistic-a123b.web.app/',
+    url_gitHub: 'https://github.com/veeepi/passion-project-veeepi',
     techs: ['React', 'Firebase', 'Javascript'],
     techIcons: [
       require('../assets/images/tech/icon-react.png'),
@@ -45,6 +47,7 @@ const projects = [
     imageFileName: 'Vladculator.jpg',
     imageFilePath: require('../assets/images/projects/Vladculator.jpg'),
     url: '',
+    url_gitHub: 'https://github.com/veeepi/front-end-moist-speaking',
     techs: [
       'React',
       'NodeJS',
@@ -73,6 +76,7 @@ const projects = [
     imageFileName: 'Vladculator.jpg',
     imageFilePath: require('../assets/images/projects/Vladculator.jpg'),
     url: '',
+    url_gitHub: 'https://github.com/veeepi/mobile-project-team-2',
     techs: ['React-Native', 'Firebase', 'Javascript'],
     techIcons: [
       require('../assets/images/tech/icon-react.png'),
@@ -91,6 +95,7 @@ const projects = [
     imageFileName: 'WishBucket.jpg',
     imageFilePath: require('../assets/images/projects/WishBucket.jpg'),
     url: 'https://wishbucket.netlify.app/',
+    url_gitHub: 'https://github.com/veeepi/dotnetproject-team6_netproject',
     techs: ['React', 'ASP.NET', 'SQL', 'C-Sharp', 'Javascript'],
     techIcons: [
       require('../assets/images/tech/icon-react.png'),
@@ -109,6 +114,7 @@ const projects = [
     imageFileName: 'Shredz.jpg',
     imageFilePath: require('../assets/images/projects/Shredz.jpg'),
     url: 'https://lucid-hawking-f430e1.netlify.app/',
+    url_gitHub: 'https://github.com/veeepi/front-end-project-boomshakalaka',
     techs: ['HTML5', 'CSS', 'SASS', 'Javascript'],
     techIcons: [
       require('../assets/images/tech/icon-html5.png'),
@@ -127,6 +133,7 @@ const projects = [
     imageFileName: 'Chill.jpg',
     imageFilePath: require('../assets/images/projects/Chill.jpg'),
     url: 'https://xenodochial-wilson-4239db.netlify.app/',
+    url_gitHub: 'https://github.com/veeepi/lab-2---react-veeepi',
     techs: ['React', 'Javascript'],
     techIcons: [
       require('../assets/images/tech/icon-javascript.png'),
@@ -143,6 +150,8 @@ const projects = [
     imageFileName: 'Perfectissimo.jpg',
     imageFilePath: require('../assets/images/projects/Perfectissimo.jpg'),
     url: 'https://hopeful-roentgen-612fae.netlify.app/',
+    url_gitHub:
+      'https://github.com/veeepi/lab-7-intermediate-javascript-group_i',
     techs: ['HTML5', 'CSS', 'Javascript', 'JQuery'],
     techIcons: [
       require('../assets/images/tech/icon-javascript.png'),
@@ -160,6 +169,7 @@ const projects = [
     techs: ['HTML5', 'CSS', 'SASS', 'Javascript', 'JQuery'],
     imageFilePath: require('../assets/images/projects/UntamedRomania.jpg'),
     url: 'https://infallible-hodgkin-d8fc87.netlify.app/',
+    url_gitHub: 'https://github.com/veeepi/lab-8-introduction-to-jquery-veeepi',
     techIcons: [
       require('../assets/images/tech/icon-html5.png'),
       require('../assets/images/tech/icon-sass.png'),
@@ -178,6 +188,8 @@ const projects = [
     imageFilePath: require('../assets/images/projects/BOBN.jpg'),
     techs: ['HTML5', 'Bootstrap'],
     url: 'https://pensive-jepsen-f44ba1.netlify.app',
+    url_gitHub:
+      'https://github.com/veeepi/lab-4-introduction-to-bootstrap-veeepi',
     techIcons: [
       require('../assets/images/tech/icon-html5.png'),
       require('../assets/images/tech/icon-bootstrap.png'),
@@ -193,6 +205,8 @@ const projects = [
     imageFileName: 'Vladculator.jpg',
     imageFilePath: require('../assets/images/projects/Vladculator.jpg'),
     url: '',
+    url_gitHub:
+      'https://github.com/veeepi/net-essentials-lab-1-calculator-veeepi',
     techs: ['C-Sharp'],
     techIcons: [require('../assets/images/tech/icon-csharp.png')],
   },
