@@ -95,8 +95,7 @@ const projects = [
     imageFileName: 'WishBucket.jpg',
     imageFilePath: require('../assets/images/projects/WishBucket.jpg'),
     url: 'https://wishbucket.netlify.app/',
-    url_gitHub:
-      'https://github.com/BCIT-SSD-2020-21/dotnetproject-team6_netproject',
+    url_gitHub: 'https://github.com/veeepi/dotnetproject-team6_netproject',
     techs: ['React', 'ASP.NET', 'SQL', 'C-Sharp', 'Javascript'],
     techIcons: [
       require('../assets/images/tech/icon-react.png'),
@@ -152,7 +151,7 @@ const projects = [
     imageFilePath: require('../assets/images/projects/Perfectissimo.jpg'),
     url: 'https://hopeful-roentgen-612fae.netlify.app/',
     url_gitHub:
-      'https://github.com/BCIT-SSD-2020-21/lab-7-intermediate-javascript-group_i',
+      'https://github.com/veeepi/lab-7-intermediate-javascript-group_i',
     techs: ['HTML5', 'CSS', 'Javascript', 'JQuery'],
     techIcons: [
       require('../assets/images/tech/icon-javascript.png'),
@@ -207,7 +206,7 @@ const projects = [
     imageFilePath: require('../assets/images/projects/Vladculator.jpg'),
     url: '',
     url_gitHub:
-      'https://github.com/BCIT-SSD-2020-21/net-essentials-lab-1-calculator-veeepi',
+      'https://github.com/veeepi/net-essentials-lab-1-calculator-veeepi',
     techs: ['C-Sharp'],
     techIcons: [require('../assets/images/tech/icon-csharp.png')],
   },
