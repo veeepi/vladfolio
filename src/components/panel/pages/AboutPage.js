@@ -7,6 +7,8 @@ export default function AboutPage() {
       <div className="aboutPage__download">
         <a
           href="https://www.dropbox.com/s/apkfpiz3c11r8z2/Resume%20-%20Vlad%20Preduna.pdf?dl=0"
+          target="_blank"
+          // rel="noreferrer"
           download
         >
           View/Download Resume
