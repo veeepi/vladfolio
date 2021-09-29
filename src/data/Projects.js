@@ -45,7 +45,7 @@ const projects = [
       'Social Media application with political theme. Implements expected functionality, such as posts (image and text), comments, likes and vote.',
     cardImagePath: '../../assets/images/projects/Vladculator.jpg',
     imageFileName: 'Vladculator.jpg',
-    imageFilePath: require('../assets/images/projects/Vladculator.jpg'),
+    imageFilePath: require('../assets/images/projects/MoistSpeak.jpg'),
     url: '',
     url_gitHub: 'https://github.com/veeepi/front-end-moist-speaking',
     techs: [
