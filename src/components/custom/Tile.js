@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { debounce } from 'lodash';
 import { Scrollbars } from 'react-custom-scrollbars';
-import { AiOutlineGithub } from 'react-icons/ai';
+import { AiOutlineGithub, AiOutlineLink } from 'react-icons/ai';
 require('dotenv').config();
 
 export default function Tile({ project }) {
@@ -16,19 +16,32 @@ export default function Tile({ project }) {
       {hovered ? (
         <div className="portfolioPage__body__tiles__tile__info">
           {/*  */}
-          <h3
+          <div
             id="portfolioItem_title"
             className="portfolioPage__body__tiles__tile__info__title"
           >
-            <a
-              href={project.url}
-              id="portfolioItem_url"
-              className="portfolioPage__body__tiles__tile__info__title__link"
-              target="_blank"
-              rel="noreferrer"
-            >
-              {project.title}
-            </a>
+            {project.url ? (
+              <a
+                href={project.url}
+                id="portfolioItem_url"
+                className="portfolioPage__body__tiles__tile__info__title__link"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <span>
+                  <AiOutlineLink
+                    className="portfolioPage__body__tiles__tile__info__title__link__icon"
+                    size={24}
+                  />
+                </span>
+                {project.title}
+              </a>
+            ) : (
+              <p className="portfolioPage__body__tiles__tile__info__title__link">
+                {project.title}
+              </p>
+            )}
+
             <a
               href={project.url_gitHub}
               id="portfolioItem_url"
@@ -38,7 +51,7 @@ export default function Tile({ project }) {
             >
               <AiOutlineGithub size={32} />
             </a>
-          </h3>
+          </div>
 
           {/*  */}
           <Scrollbars
