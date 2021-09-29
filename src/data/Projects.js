@@ -74,7 +74,7 @@ const projects = [
       'Stock trading app using the Finnhub.io API, allowing authenticated users to manage a Stock Portfolio, buy/sell stocks and keep a stock Watchlist.',
     cardImagePath: '../../assets/images/projects/Vladculator.jpg',
     imageFileName: 'Vladculator.jpg',
-    imageFilePath: require('../assets/images/projects/Vladculator.jpg'),
+    imageFilePath: require('../assets/images/projects/DiamondHands.jpg'),
     url: '',
     url_gitHub: 'https://github.com/veeepi/mobile-project-team-2',
     techs: ['React-Native', 'Firebase', 'Javascript'],
