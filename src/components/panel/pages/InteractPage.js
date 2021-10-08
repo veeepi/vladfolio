@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import posts from '../../../data/Posts';
+import BackButton from '../../custom/BackButton';
 // import Tile from '../../custom/Tile';
 
 export default function InteractPage() {
@@ -9,12 +10,13 @@ export default function InteractPage() {
     <div className="interactPage animate__animated animate__bounceInLeft">
       {appSelected ? (
         <div className="interactPage__applet">
-          <button
+          <BackButton action={setAppSelected} text={'Back to Menu'} />
+          {/* <button
             className="interactPage__applet__backButton"
             onClick={() => setAppSelected(null)}
           >
             Back to Menu
-          </button>
+          </button> */}
           <iframe
             className="interactPage__applet__iframe"
             src="https://vladgorithms.web.app/"
