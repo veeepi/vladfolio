@@ -1,6 +1,6 @@
 import React from 'react';
 import pages from '../../data/Pages';
-import CloseButton from './CloseButton';
+import CloseButton from '../custom/CloseButton';
 import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
 import InteractPage from './pages/InteractPage';
