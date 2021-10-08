@@ -10,7 +10,7 @@ export default function InteractPage() {
       {/* Display a piece of data somehow */}
 
       <h1 className="interactPage__heading">
-        {/* <span className="interactPage__heading__letters">
+        <span className="interactPage__heading__letters">
           <span id="1C">C</span>
           <span id="2O">O</span>
           <span id="3M">M</span>
@@ -22,14 +22,14 @@ export default function InteractPage() {
           <span id="91">O</span>
           <span id="11O">O</span>
           <span id="12N">N</span>
-        </span> */}
+        </span>
         <br />
         {/* <IoConstructOutline
 						size={42}
 						className="interactPage__heading__icon"
 					/> */}
       </h1>
-      <div className="interactPage__body">
+      {/* <div className="interactPage__body">
         {posts.map((item, index) => {
           return (
             <div key={index} className="interactPage__body__post">
@@ -40,7 +40,7 @@ export default function InteractPage() {
             </div>
           );
         })}
-      </div>
+      </div> */}
     </div>
   );
 }
