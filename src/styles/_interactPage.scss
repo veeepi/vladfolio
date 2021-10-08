@@ -1,8 +1,13 @@
+.view {
+  overflow: scroll;
+  margin-right: -17px !important;
+  margin-bottom: -17px !important; // changed from -15px  (default) to -17px (native scrollbar had a portion visible)
+}
+
 .interactPage {
   margin: auto;
   margin-top: 25px;
   margin-bottom: 6%;
-
   width: 94%;
   &__heading {
     &__letters {
@@ -31,6 +36,7 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    padding: 0 4%;
     height: 70vh;
     &__post {
       align-items: center;

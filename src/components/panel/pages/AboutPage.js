@@ -37,7 +37,9 @@ export default function AboutPage() {
               I'm a full-stack web &amp; mobile developer.
             </p>
             <br />
-            <p>Let's solve problems beautifully.</p>
+            <p className="aboutPage__body__intro__narrative__textbox">
+              Let's solve problems beautifully.
+            </p>
             {/* <br />
             <p>
               I currently possess 7 years of experience in Accounting &amp;
@@ -52,9 +54,9 @@ export default function AboutPage() {
 
         <div className="aboutPage__body__skills">
           <div className="aboutPage__body__skills__column">
-            <h1 className="aboutPage__body__skills__column__heading">
+            <h3 className="aboutPage__body__skills__column__heading">
               Front-End
-            </h1>
+            </h3>
             <div className="aboutPage__body__skills__column__body">
               <ul>
                 <li>HTML, CSS/SASS</li>
@@ -66,11 +68,9 @@ export default function AboutPage() {
             <div className="aboutPage__body__skills__column__tools"></div>
           </div>
           <div className="aboutPage__body__skills__column">
-            <div className="aboutPage__body__skills__column__heading">
-              <h1 className="aboutPage__body__skills__column__heading">
-                Back-End
-              </h1>
-            </div>
+            <h3 className="aboutPage__body__skills__column__heading">
+              Back-End
+            </h3>
             <div className="aboutPage__body__skills__column__body">
               <ul>
                 <li>C#, Java, Ruby, Python</li>
@@ -83,7 +83,9 @@ export default function AboutPage() {
 
         <div className="aboutPage__body__experience">
           <div className="aboutPage__body__experience__section">
-            <h1>Education</h1>
+            <h1 className="aboutPage__body__experience__section__heading">
+              Education
+            </h1>
             <h3 className="aboutPage__body__experience__section__title">
               British Columbia Institute of Technology
             </h3>
@@ -101,7 +103,7 @@ export default function AboutPage() {
           </div>
 
           <div className="aboutPage__body__experience__section">
-            <h1 className="aboutPage__body__experience__section__title">
+            <h1 className="aboutPage__body__experience__section__heading">
               Recent Work Experience
             </h1>
             <h3 className="aboutPage__body__experience__section__subject">

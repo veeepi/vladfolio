@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Scrollbars } from 'react-custom-scrollbars';
 import projects from '../../../data/Projects';
 import BackButton from '../../custom/BackButton';
 
@@ -19,24 +20,29 @@ export default function InteractPage() {
           ></iframe>
         </div>
       ) : (
-        <div className="interactPage__menu">
-          {interactPageProjects.map((item, index) => {
-            return (
-              <button
-                key={index}
-                className="interactPage__menu__post"
-                onClick={() => setAppSelected(item)}
-              >
-                <h1 className="interactPage__menu__post__title">
-                  {item.title}
-                </h1>
-                <p className="interactPage__menu__post__description">
-                  {item.description}
-                </p>
-              </button>
-            );
-          })}
-        </div>
+        <Scrollbars
+          style={{ height: '70vh', border: 'none' }}
+          renderView={(props) => <div {...props} className="view" />}
+        >
+          <div className="interactPage__menu">
+            {interactPageProjects.map((item, index) => {
+              return (
+                <button
+                  key={index}
+                  className="interactPage__menu__post"
+                  onClick={() => setAppSelected(item)}
+                >
+                  <h1 className="interactPage__menu__post__title">
+                    {item.title}
+                  </h1>
+                  <p className="interactPage__menu__post__description">
+                    {item.description}
+                  </p>
+                </button>
+              );
+            })}
+          </div>
+        </Scrollbars>
       )}
       {!appSelected && (
         <h1 className="interactPage__heading">
