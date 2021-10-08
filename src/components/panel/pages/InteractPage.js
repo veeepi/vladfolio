@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import posts from '../../../data/Posts';
+import projects from '../../../data/Projects';
 import BackButton from '../../custom/BackButton';
-// import Tile from '../../custom/Tile';
 
 export default function InteractPage() {
+  const interactPageProjects = projects.filter((item) => item.interactPage);
+
   const [appSelected, setAppSelected] = useState(null);
 
   return (
@@ -11,28 +12,20 @@ export default function InteractPage() {
       {appSelected ? (
         <div className="interactPage__applet">
           <BackButton action={setAppSelected} text={'Back to Menu'} />
-          {/* <button
-            className="interactPage__applet__backButton"
-            onClick={() => setAppSelected(null)}
-          >
-            Back to Menu
-          </button> */}
           <iframe
             className="interactPage__applet__iframe"
-            src="https://vladgorithms.web.app/"
+            src={appSelected.url}
             title="Google.com (test)"
           ></iframe>
         </div>
       ) : (
         <div className="interactPage__menu">
-          {posts.map((item, index) => {
+          {interactPageProjects.map((item, index) => {
             return (
-              // <Tile project={item} key={index} />
-
               <button
                 key={index}
                 className="interactPage__menu__post"
-                onClick={() => setAppSelected(item.id)}
+                onClick={() => setAppSelected(item)}
               >
                 <h1 className="interactPage__menu__post__title">
                   {item.title}
@@ -43,25 +36,25 @@ export default function InteractPage() {
               </button>
             );
           })}
-          <h1 className="interactPage__heading">
-            <span className="interactPage__heading__letters">
-              <span>More</span>
-              <span id="7blank"> </span>
-              <span id="1C">C</span>
-              <span id="2O">O</span>
-              <span id="3M">M</span>
-              <span id="4I">I</span>
-              <span id="5N">N</span>
-              <span id="6G">G</span>
-              <span id="7blank"> </span>
-              <span id="8S">S</span>
-              <span id="91">O</span>
-              <span id="11O">O</span>
-              <span id="12N">N</span>
-            </span>
-          </h1>
         </div>
       )}
+      <h1 className="interactPage__heading">
+        <span className="interactPage__heading__letters">
+          <span>More</span>
+          <span id="7blank"> </span>
+          <span id="1C">C</span>
+          <span id="2O">O</span>
+          <span id="3M">M</span>
+          <span id="4I">I</span>
+          <span id="5N">N</span>
+          <span id="6G">G</span>
+          <span id="7blank"> </span>
+          <span id="8S">S</span>
+          <span id="91">O</span>
+          <span id="11O">O</span>
+          <span id="12N">N</span>
+        </span>
+      </h1>
     </div>
   );
 }
