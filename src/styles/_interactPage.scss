@@ -1,12 +1,13 @@
 .interactPage {
   // border: 1px solid white;
   margin: auto;
-  margin-bottom: 80%;
+  margin-bottom: 60%;
 
   &__heading {
     &__letters {
+      color: white;
       cursor: default;
-      font-size: 2em;
+      font-size: 1.6em;
       font-family: 'Archaic-Roman';
       @include transition250ms;
       span {
@@ -26,15 +27,25 @@
     }
   }
 
-  &__body {
-    border: 1px solid white;
+  &__menu {
+    // border: 1px solid white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 60vh;
 
     &__post {
-      border: 1px solid white;
+      background-color: $mistblue;
+      border: 1px solid $warmorange;
       border-radius: 25px;
       padding: 5%;
       &__title {
-        color: red;
+        font-size: 1.4em;
+        font-weight: bold;
+        color: white;
+      }
+      &:hover {
+        cursor: pointer;
       }
     }
   }
