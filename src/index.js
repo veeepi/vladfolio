@@ -4,6 +4,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import NoIE from './components/panel/pages/NoIE';
 import reportWebVitals from './reportWebVitals';
 import Bowser from 'bowser';
 
@@ -11,7 +12,11 @@ const browser = Bowser.getParser(window.navigator.userAgent);
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    {browser.parsedResult.browser.name === 'Internet Explorer' ? (
+      <NoIE />
+    ) : (
+      <App />
+    )}
   </React.StrictMode>,
   document.getElementById('root')
 );
