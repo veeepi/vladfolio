@@ -117,6 +117,7 @@
     &__experience {
       display: flex;
       flex-direction: column;
+      padding-bottom: 180px;
       text-align: left;
       &__section {
         @include textSize_li;
