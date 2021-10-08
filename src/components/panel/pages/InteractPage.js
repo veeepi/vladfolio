@@ -38,23 +38,28 @@ export default function InteractPage() {
           })}
         </div>
       )}
-      <h1 className="interactPage__heading">
-        <span className="interactPage__heading__letters">
-          <span>More</span>
-          <span id="7blank"> </span>
-          <span id="1C">C</span>
-          <span id="2O">O</span>
-          <span id="3M">M</span>
-          <span id="4I">I</span>
-          <span id="5N">N</span>
-          <span id="6G">G</span>
-          <span id="7blank"> </span>
-          <span id="8S">S</span>
-          <span id="91">O</span>
-          <span id="11O">O</span>
-          <span id="12N">N</span>
-        </span>
-      </h1>
+      {!appSelected && (
+        <h1 className="interactPage__heading">
+          <span className="interactPage__heading__letters">
+            <span id="1M">M</span>
+            <span id="2O">O</span>
+            <span id="3R">R</span>
+            <span id="4E">E</span>
+            <span id="7blank"> </span>
+            <span id="1C">C</span>
+            <span id="2O">O</span>
+            <span id="3M">M</span>
+            <span id="4I">I</span>
+            <span id="5N">N</span>
+            <span id="6G">G</span>
+            <span id="7blank"> </span>
+            <span id="8S">S</span>
+            <span id="91">O</span>
+            <span id="11O">O</span>
+            <span id="12N">N</span>
+          </span>
+        </h1>
+      )}
     </div>
   );
 }

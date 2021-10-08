@@ -1,15 +1,19 @@
 .contactPage {
-  font-family: 'RussoOne-Regular';
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  font-family: 'RussoOne-Regular';
+  height: 78vh;
+  justify-content: space-around;
   margin: auto;
-  height: 100%;
   width: 95%;
+  @media screen and (min-width: $min-width-desktop) {
+    margin-top: 3%;
+  }
   &__intro {
     &__p {
-      font-size: 14px;
-      margin: 4% 10%;
+      @include p_textSize;
+      line-height: 1.2;
+      margin: 2% 10%;
       text-align: start;
     }
     &__p a {
@@ -17,13 +21,11 @@
     }
   }
   &__section {
-    border: 2px solid $mistblue;
-    border-radius: 35px;
     &__form {
-      margin-top: 2%;
-      @media screen and (min-width: $min-width-tablet) {
-        margin-top: 10%;
-      }
+      border: 2px solid $mistblue;
+      border-radius: 35px;
+      padding: 3% 10%;
+      margin-top: 1%;
       margin-left: auto;
       margin-right: auto;
       width: 85%;
@@ -31,7 +33,6 @@
         width: 75%;
         font-size: 20px;
       }
-      // width: 85%;
       &__field {
         display: flex;
         flex-direction: column;
@@ -51,6 +52,7 @@
           border-radius: 7px;
           @include hoverGlow20;
           &:active {
+            border: 1px solid red;
             background-color: $light-warmorange;
           }
           margin-bottom: 5%;
@@ -64,29 +66,22 @@
         color: white;
         padding-left: 10%;
         padding-right: 10%;
-        margin: 2%;
+        margin: 2% 2% 8% 2%;
         @media screen and (min-width: $min-width-tablet) {
-          margin: 8%;
+          margin: 2% 0 0 0;
         }
         font-size: 1.4em;
-        border-radius: 10px;
+        border-radius: 6px;
         cursor: pointer;
         background: linear-gradient(
-          20deg,
+          80deg,
           rgba(200, 125, 45, 1) 0%,
-          rgba(218, 135, 70, 1) 30%,
-          rgba(220, 140, 65, 1) 40%,
-          rgba(235, 145, 55, 1) 50%,
-          rgba(235, 145, 55, 1) 65%,
-          rgba(235, 145, 55, 1) 75%,
-          rgba(240, 195, 150, 1) 90%
+          rgba(218, 135, 70, 1) 91%,
+          rgba(240, 195, 150, 1) 99.5%
         );
         &:hover {
           box-shadow: 0 0 20px #ddd;
-          // outline-style: solid;
-          // outline-color: $dark-mistblue;
-          // outline-width: thick;
-          color: $dark-mistblue;
+          color: $dark-warmorange;
           background: linear-gradient(
             20deg,
             rgba(238, 165, 100, 1) 0%,
@@ -113,7 +108,6 @@
       cursor: pointer;
       border-radius: 50%;
       @include hoverGlow20;
-      padding: 2%;
       color: white;
       &:hover {
         color: $warmorange;
@@ -124,17 +118,6 @@
     font-size: 32px;
   }
   &__sendAnotherButton {
-    border: none;
-    color: white;
-    padding: 1% 10%;
-    margin: 2% auto;
-    width: 40%;
-    @media screen and (min-width: $min-width-tablet) {
-      margin: 8% auto;
-    }
-    font-size: 1.4em;
-    border-radius: 10px;
-    cursor: pointer;
     background: linear-gradient(
       20deg,
       rgba(200, 125, 45, 1) 0%,
@@ -142,15 +125,23 @@
       rgba(220, 140, 65, 1) 40%,
       rgba(235, 145, 55, 1) 50%,
       rgba(235, 145, 55, 1) 65%,
-      rgba(235, 145, 55, 1) 75%,
-      rgba(240, 195, 150, 1) 90%
+      rgba(235, 145, 55, 1) 80%,
+      rgba(240, 195, 150, 1) 95%
     );
+    border: none;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    font-size: 1.4em;
+    margin: 2% auto;
+    padding: 2% 40px;
+    width: 60%;
+    @media screen and (min-width: $min-width-tablet) {
+      margin: 8% auto;
+    }
     &:hover {
       box-shadow: 0 0 20px #ddd;
-      // outline-style: solid;
-      // outline-color: $dark-mistblue;
-      // outline-width: thick;
-      color: $dark-mistblue;
+      color: $dark-warmorange;
       background: linear-gradient(
         20deg,
         rgba(238, 165, 100, 1) 0%,

@@ -1,6 +1,8 @@
 .interactPage {
   margin: auto;
-  margin-bottom: 10%;
+  margin-top: 25px;
+  margin-bottom: 6%;
+
   width: 94%;
   &__heading {
     &__letters {
@@ -10,9 +12,8 @@
       font-family: 'Archaic-Roman';
       @include transition250ms;
       span {
-        @include hoverGlow20;
         &:hover {
-          color: white;
+          color: black;
         }
       }
     }
@@ -21,7 +22,7 @@
       justify-content: center;
       @include hoverGlow20;
       &:hover {
-        color: white;
+        color: #ffffff;
       }
     }
   }
@@ -29,18 +30,33 @@
   &__menu {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    height: 60vh;
-
+    justify-content: flex-start;
+    height: 70vh;
     &__post {
+      align-items: center;
       background-color: $mistblue;
+      background-image: none;
       border: 1px solid $warmorange;
       border-radius: 25px;
-      padding: 5%;
+      display: flex;
+      flex-direction: column;
+      height: 12vh;
+      justify-content: space-between;
+      margin: 5px 0;
+      padding: 2%;
+      transition: background-color 420ms ease-in-out;
+      &:hover {
+        background-color: $lighter-mistblue;
+        transition: background-color 420ms ease-in-out;
+      }
       &__title {
-        font-size: 1.4em;
-        font-weight: bold;
+        font-family: 'RussoOne-Regular';
+        font-size: 1.6em;
         color: white;
+      }
+      &__description {
+        font-family: 'RussoOne-Regular';
+        font-size: 1.1em;
       }
       &:hover {
         cursor: pointer;
@@ -51,9 +67,6 @@
   &__applet {
     display: flex;
     flex-direction: column;
-    height: 100%;
-    // width: 100%;
-
     &__iframe {
       height: 70vh;
       width: 100%;
