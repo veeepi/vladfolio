@@ -1,4 +1,5 @@
 import React from 'react';
+import posts from '../../../data/Posts';
 
 export default function InteractPage() {
   return (
@@ -28,6 +29,18 @@ export default function InteractPage() {
 						className="interactPage__heading__icon"
 					/> */}
       </h1>
+      {/* <div className="interactPage__body">
+        {posts.map((item, index) => {
+          return (
+            <div key={index} className="interactPage__body__post">
+              <h1 className="interactPage__body__post__title">{item.title}</h1>
+              <p className="interactPage__body__post__description">
+                {item.description}
+              </p>
+            </div>
+          );
+        })}
+      </div> */}
     </div>
   );
 }

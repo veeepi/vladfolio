@@ -1,6 +1,8 @@
 .interactPage {
+  // border: 1px solid white;
   margin: auto;
   margin-bottom: 80%;
+
   &__heading {
     &__letters {
       cursor: default;
@@ -20,6 +22,19 @@
       @include hoverGlow20;
       &:hover {
         color: white;
+      }
+    }
+  }
+
+  &__body {
+    border: 1px solid white;
+
+    &__post {
+      border: 1px solid white;
+      border-radius: 25px;
+      padding: 5%;
+      &__title {
+        color: red;
       }
     }
   }
