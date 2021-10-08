@@ -8,7 +8,19 @@ export default function InteractPage() {
   return (
     <div className="interactPage animate__animated animate__bounceInLeft">
       {appSelected ? (
-        <div>App selected</div>
+        <div className="interactPage__applet">
+          <button
+            className="interactPage__applet__backButton"
+            onClick={() => setAppSelected(null)}
+          >
+            Back to Menu
+          </button>
+          <iframe
+            className="interactPage__applet__iframe"
+            src="https://vladgorithms.web.app/"
+            title="Google.com (test)"
+          ></iframe>
+        </div>
       ) : (
         <div className="interactPage__menu">
           {posts.map((item, index) => {
