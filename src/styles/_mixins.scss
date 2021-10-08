@@ -38,13 +38,33 @@
   transition: all 250ms ease-out;
 }
 
-@mixin p_textSize {
-  font-size: 0.8em;
+@mixin textSize_p {
+  font-size: 0.9em;
   @media screen and (min-width: $min-width-tablet) {
     font-size: 1.2em;
   }
   @media screen and (min-width: $min-width-desktop) {
     font-size: 1.3em;
+  }
+}
+
+@mixin textSize_li {
+  font-size: 0.9em;
+  @media screen and (min-width: $min-width-tablet) {
+    font-size: 1.2em;
+  }
+  @media screen and (min-width: $min-width-desktop) {
+    font-size: 1.3em;
+  }
+}
+
+@mixin textSize_h3 {
+  font-size: 1.1em;
+  @media screen and (min-width: $min-width-tablet) {
+    font-size: 1.3em;
+  }
+  @media screen and (min-width: $min-width-desktop) {
+    font-size: 1.5em;
   }
 }
 
