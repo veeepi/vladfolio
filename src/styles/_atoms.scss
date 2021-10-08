@@ -1,0 +1,29 @@
+.button {
+  align-items: center;
+  background-color: $warmorange;
+  border-radius: 10px;
+  border: none;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  padding: 4px 16px;
+  width: 220px;
+  @include hoverGlow20;
+  &:hover {
+    background-image: linear-gradient(
+      rgba(220, 220, 220, 1),
+      rgba(225, 225, 225, 1),
+      rgba(230, 230, 230, 1),
+      rgba(240, 240, 240, 1),
+      rgba(255, 255, 255, 1),
+      rgba(235, 145, 55, 1)
+    );
+    color: $dark-warmorange;
+    cursor: pointer;
+  }
+  &__icon {
+  }
+  &__text {
+    font-size: 1.6em;
+  }
+}

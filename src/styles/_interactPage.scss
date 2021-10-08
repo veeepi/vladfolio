@@ -1,18 +1,19 @@
 .interactPage {
-  // border: 1px solid white;
   margin: auto;
-  margin-bottom: 80%;
+  margin-top: 25px;
+  margin-bottom: 6%;
 
+  width: 94%;
   &__heading {
     &__letters {
+      color: white;
       cursor: default;
-      font-size: 2em;
+      font-size: 1.6em;
       font-family: 'Archaic-Roman';
       @include transition250ms;
       span {
-        @include hoverGlow20;
         &:hover {
-          color: white;
+          color: black;
         }
       }
     }
@@ -21,21 +22,54 @@
       justify-content: center;
       @include hoverGlow20;
       &:hover {
-        color: white;
+        color: #ffffff;
       }
     }
   }
 
-  &__body {
-    border: 1px solid white;
-
+  &__menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 70vh;
     &__post {
-      border: 1px solid white;
+      align-items: center;
+      background-color: $mistblue;
+      background-image: none;
+      border: 1px solid $warmorange;
       border-radius: 25px;
-      padding: 5%;
-      &__title {
-        color: red;
+      display: flex;
+      flex-direction: column;
+      height: 12vh;
+      justify-content: space-between;
+      margin: 5px 0;
+      padding: 2%;
+      transition: background-color 420ms ease-in-out;
+      &:hover {
+        background-color: $lighter-mistblue;
+        transition: background-color 420ms ease-in-out;
       }
+      &__title {
+        font-family: 'RussoOne-Regular';
+        font-size: 1.6em;
+        color: white;
+      }
+      &__description {
+        font-family: 'RussoOne-Regular';
+        font-size: 1.1em;
+      }
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__applet {
+    display: flex;
+    flex-direction: column;
+    &__iframe {
+      height: 70vh;
+      width: 100%;
     }
   }
 }

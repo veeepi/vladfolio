@@ -1,46 +1,65 @@
-import React from 'react';
-import posts from '../../../data/Posts';
+import React, { useState } from 'react';
+import projects from '../../../data/Projects';
+import BackButton from '../../custom/BackButton';
 
 export default function InteractPage() {
+  const interactPageProjects = projects.filter((item) => item.interactPage);
+
+  const [appSelected, setAppSelected] = useState(null);
+
   return (
     <div className="interactPage animate__animated animate__bounceInLeft">
-      {/* Coming Soon */}
-      {/* Make Fontsize individual letters reactive on Hover */}
-      {/* Infinite Transition in Color? cycle between 4 */}
-      {/* Display a piece of data somehow */}
-
-      <h1 className="interactPage__heading">
-        <span className="interactPage__heading__letters">
-          <span id="1C">C</span>
-          <span id="2O">O</span>
-          <span id="3M">M</span>
-          <span id="4I">I</span>
-          <span id="5N">N</span>
-          <span id="6G">G</span>
-          <span id="7blank"> </span>
-          <span id="8S">S</span>
-          <span id="91">O</span>
-          <span id="11O">O</span>
-          <span id="12N">N</span>
-        </span>
-        <br />
-        {/* <IoConstructOutline
-						size={42}
-						className="interactPage__heading__icon"
-					/> */}
-      </h1>
-      {/* <div className="interactPage__body">
-        {posts.map((item, index) => {
-          return (
-            <div key={index} className="interactPage__body__post">
-              <h1 className="interactPage__body__post__title">{item.title}</h1>
-              <p className="interactPage__body__post__description">
-                {item.description}
-              </p>
-            </div>
-          );
-        })}
-      </div> */}
+      {appSelected ? (
+        <div className="interactPage__applet">
+          <BackButton action={setAppSelected} text={'Back to Menu'} />
+          <iframe
+            className="interactPage__applet__iframe"
+            src={appSelected.url}
+            title="Google.com (test)"
+          ></iframe>
+        </div>
+      ) : (
+        <div className="interactPage__menu">
+          {interactPageProjects.map((item, index) => {
+            return (
+              <button
+                key={index}
+                className="interactPage__menu__post"
+                onClick={() => setAppSelected(item)}
+              >
+                <h1 className="interactPage__menu__post__title">
+                  {item.title}
+                </h1>
+                <p className="interactPage__menu__post__description">
+                  {item.description}
+                </p>
+              </button>
+            );
+          })}
+        </div>
+      )}
+      {!appSelected && (
+        <h1 className="interactPage__heading">
+          <span className="interactPage__heading__letters">
+            <span id="1M">M</span>
+            <span id="2O">O</span>
+            <span id="3R">R</span>
+            <span id="4E">E</span>
+            <span id="7blank"> </span>
+            <span id="1C">C</span>
+            <span id="2O">O</span>
+            <span id="3M">M</span>
+            <span id="4I">I</span>
+            <span id="5N">N</span>
+            <span id="6G">G</span>
+            <span id="7blank"> </span>
+            <span id="8S">S</span>
+            <span id="91">O</span>
+            <span id="11O">O</span>
+            <span id="12N">N</span>
+          </span>
+        </h1>
+      )}
     </div>
   );
 }

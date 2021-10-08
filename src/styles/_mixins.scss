@@ -38,6 +38,16 @@
   transition: all 250ms ease-out;
 }
 
+@mixin p_textSize {
+  font-size: 0.8em;
+  @media screen and (min-width: $min-width-tablet) {
+    font-size: 1.2em;
+  }
+  @media screen and (min-width: $min-width-desktop) {
+    font-size: 1.3em;
+  }
+}
+
 @mixin transition250ms {
   -webkit-transition: all 250ms ease-out;
   -moz-transition: all 250ms ease-out;

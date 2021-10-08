@@ -10,7 +10,7 @@ export default function PortfolioPage() {
   const techTypes = filterTechTypes(techs);
 
   const [selectedTechs, setSelectedTechs] = useState(techs);
-  const [displayedProjects, setDisplayedProjects] = useState(projects);
+  const [displayedProjects, setDisplayedProjects] = useState([]);
 
   useEffect(() => {
     let newDisplayedProjects = [];
@@ -19,7 +19,8 @@ export default function PortfolioPage() {
       return tech.name;
     });
 
-    projects.forEach((project) => {
+    let portfolioPageProjects = projects.filter((item) => item.portfolioPage);
+    portfolioPageProjects.forEach((project) => {
       // match True if one element in array1(proj's techs) matches array2 (tech names selected)
       const projectTechMatch = project.techs.some(
         (r) => selectedTechNames.indexOf(r) >= 0

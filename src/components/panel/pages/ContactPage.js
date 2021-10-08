@@ -9,11 +9,9 @@ export default function ContactPage() {
     email: '',
     message: '',
   });
-
   const handleSendMail = async () => {
     setMailSent(true);
     try {
-      // await axios.post('http://localhost:4000/send', { ...contactInfo });
       await axios.post(
         'https://us-central1-nodefire-contact.cloudfunctions.net/app/send',
         { ...contactInfo }
@@ -22,8 +20,6 @@ export default function ContactPage() {
       console.log(error);
     }
   };
-
-  console.log('contactInfo: ', contactInfo);
 
   return (
     <>
@@ -34,7 +30,9 @@ export default function ContactPage() {
             className="contactPage__sendAnotherButton"
             onClick={() => setMailSent(false)}
           >
-            Send Another
+            <h3 className="contactPage__sendAnotherButton__text">
+              Send Another
+            </h3>
           </button>
         </div>
       ) : (
@@ -124,13 +122,12 @@ export default function ContactPage() {
             </form>
           </div>
           <div className="contactPage__social">
-            {/* <AiOutlineMail size={36} className="contactPage__social__icon" /> */}
             <a
               href="https://www.linkedin.com/in/vlad-preduna/"
               target="_blank"
               rel="noreferrer"
             >
-              <AiFillLinkedin size={52} className="contactPage__social__icon" />
+              <AiFillLinkedin size={40} className="contactPage__social__icon" />
             </a>
             <a
               href="https://github.com/veeepi"
@@ -138,11 +135,10 @@ export default function ContactPage() {
               rel="noreferrer"
             >
               <AiOutlineGithub
-                size={52}
+                size={40}
                 className="contactPage__social__icon"
               />
             </a>
-            {/* <AiFillFacebook size={36} className="contactPage__social__icon" /> */}
           </div>
         </div>
       )}
