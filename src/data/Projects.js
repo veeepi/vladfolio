@@ -12,8 +12,8 @@ const projects = [
     imageFilePath: '',
     interactPage: true,
     portfolioPage: false,
-    url: '',
-    url_gitHub: '',
+    url: 'https://socialeyez-bbac3.web.app',
+    url_gitHub: 'https://github.com/veeepi/socialeyez.git',
     techs: ['React', 'Firebase'],
     techIcons: [
       require('../assets/images/tech/icon-react.png'),
@@ -32,7 +32,7 @@ const projects = [
     interactPage: true,
     portfolioPage: false,
     url: 'https://vladgorithms.web.app/',
-    url_gitHub: '',
+    url_gitHub: 'https://github.com/veeepi/vladgorithms.git',
     techs: ['Angular', 'Firebase'],
     techIcons: [
       require('../assets/images/tech/icon-angular.png'),
