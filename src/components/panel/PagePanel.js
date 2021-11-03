@@ -12,7 +12,6 @@ export default function PagePanel({ pageDisplayed, toggleDisplayPagePanel }) {
 
   return (
     <div className="pagePanel">
-      {/* display data from an object */}
       <div className="pagePanel__heading">
         <h1 className="pagePanel__heading__title">
           {arrayPageTitle.map((char, index) => {

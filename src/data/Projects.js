@@ -45,7 +45,7 @@ const projects = [
     status: 'active',
     title: 'Checkmarks',
     description:
-      'User friendly Trademark registration application for a local BC law firm. Search the CIPO database and submit comprehensive application to law firm, using 3rd paprty integrations (Clio, LawPay). ',
+      'User friendly Trademark registration application for a local BC law firm. Search the CIPO database and submit comprehensive application to law firm, using 3rd paprty integrations (Clio, LawPay).',
     cardImagePath: '../../assets/images/projects/Checkmarks.jpg',
     imageFileName: 'Checkmarks.jpg',
     imageFilePath: require('../assets/images/projects/Checkmarks.jpg'),
@@ -66,7 +66,7 @@ const projects = [
     status: 'active',
     title: 'Holistic',
     description:
-      'Fitness coach CRM for managing client relationships and session scheduling.',
+      'Fitness coach CRM for managing client relationships and session scheduling. Completed in less than a week.',
     cardImagePath: '../../assets/images/projects/Holistic.jpg',
     imageFileName: 'Holistic.jpg',
     imageFilePath: require('../assets/images/projects/Holistic.jpg'),
