@@ -1,14 +1,14 @@
 .view {
   overflow: scroll;
-  margin-right: -17px !important;
-  margin-bottom: -17px !important; // changed from -15px  (default) to -17px (native scrollbar had a portion visible)
+  // margin-right: -17px !important;
+  // margin-bottom: -17px !important; // changed from -15px  (default) to -17px (native scrollbar had a portion visible)
 }
 
 .interactPage {
   margin: auto;
   margin-top: 25px;
   margin-bottom: 6%;
-  width: 94%;
+  // width: 94%;
   &__heading {
     &__letters {
       color: white;
@@ -36,7 +36,6 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    padding: 0 4%;
     height: 70vh;
     &__post {
       align-items: center;
@@ -74,8 +73,23 @@
     display: flex;
     flex-direction: column;
     &__iframe {
-      height: 70vh;
-      width: 100%;
+      border-radius: 15px;
+      margin: 0;
+      min-width: 320px;
+      height: 61vh;
+      @media screen and (min-width: 320px) {
+        margin: 10px 0;
+      }
+      @media screen and (min-height: $height-667) {
+        height: 66vh;
+      }
+      @media screen and (min-height: $height-812) {
+        height: 69vh;
+        // left: 10%;
+      }
+      @media screen and (min-height: $height-1024) {
+        height: 80vh;
+      }
     }
   }
 }
