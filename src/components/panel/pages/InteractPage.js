@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { AiOutlineLink } from 'react-icons/ai';
 import { Scrollbars } from 'react-custom-scrollbars';
 import projects from '../../../data/Projects';
 import BackButton from '../../custom/BackButton';
@@ -27,18 +28,42 @@ export default function InteractPage() {
           <div className="interactPage__menu">
             {interactPageProjects.map((item, index) => {
               return (
-                <button
-                  key={index}
-                  className="interactPage__menu__post"
-                  onClick={() => setAppSelected(item)}
-                >
-                  <h1 className="interactPage__menu__post__title">
-                    {item.title}
-                  </h1>
-                  <p className="interactPage__menu__post__description">
-                    {item.description}
-                  </p>
-                </button>
+                <article className="interactPage__menu__post">
+                  <button
+                    key={index}
+                    className="interactPage__menu__post__action"
+                    onClick={() => setAppSelected(item)}
+                  >
+                    <h1 className="interactPage__menu__post__action__title">
+                      {item.title}
+                    </h1>
+                    <p className="interactPage__menu__post__action__description">
+                      {item.description}
+                    </p>
+                  </button>
+                  <aside className="interactPage__menu__post__aside">
+                    <a
+                      href={item.url}
+                      className="interactPage__menu__post__aside__url"
+                    >
+                      <AiOutlineLink size={24} />
+                    </a>
+                    <ul className="interactPage__menu__post__aside__icons">
+                      {item.techs.map((tech, index) => {
+                        return (
+                          <li key={index}>
+                            <img
+                              src={item.techIcons[index].default}
+                              alt={tech + ' icon'}
+                              height="22px"
+                              width="22px"
+                            />
+                          </li>
+                        );
+                      })}
+                    </ul>
+                  </aside>
+                </article>
               );
             })}
           </div>

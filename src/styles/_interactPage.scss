@@ -1,14 +1,14 @@
 .view {
   overflow: scroll;
-  margin-right: -17px !important;
-  margin-bottom: -17px !important; // changed from -15px  (default) to -17px (native scrollbar had a portion visible)
+  // margin-right: -17px !important;
+  // margin-bottom: -17px !important; // changed from -15px  (default) to -17px (native scrollbar had a portion visible)
 }
 
 .interactPage {
   margin: auto;
   margin-top: 25px;
   margin-bottom: 6%;
-  width: 94%;
+  // width: 94%;
   &__heading {
     &__letters {
       color: white;
@@ -36,36 +36,50 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    padding: 0 4%;
     height: 70vh;
     &__post {
-      align-items: center;
-      background-color: $mistblue;
-      background-image: none;
-      border: 1px solid $warmorange;
-      border-radius: 25px;
       display: flex;
-      flex-direction: column;
-      height: 12vh;
-      justify-content: space-between;
-      margin: 5px 0;
-      padding: 2%;
-      transition: background-color 420ms ease-in-out;
-      &:hover {
-        background-color: $lighter-mistblue;
+      flex-direction: row;
+      &__action {
+        align-items: center;
+        background-color: $mistblue;
+        background-image: none;
+        border: 1px solid $warmorange;
+        border-radius: 25px;
+        display: flex;
+        flex-direction: column;
+        min-height: 12vh;
+        justify-content: space-between;
+        margin: 5px 0;
+        padding: 2%;
         transition: background-color 420ms ease-in-out;
+        &:hover {
+          background-color: $lighter-mistblue;
+          transition: background-color 420ms ease-in-out;
+        }
+        &__title {
+          font-family: 'RussoOne-Regular';
+          font-size: 1.6em;
+          color: white;
+        }
+        &__description {
+          font-family: 'RussoOne-Regular';
+          font-size: 1.1em;
+        }
+        &:hover {
+          cursor: pointer;
+        }
       }
-      &__title {
-        font-family: 'RussoOne-Regular';
-        font-size: 1.6em;
-        color: white;
-      }
-      &__description {
-        font-family: 'RussoOne-Regular';
-        font-size: 1.1em;
-      }
-      &:hover {
-        cursor: pointer;
+      &__aside {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 12px 3px;
+        &__url {
+        }
+        &__icons {
+          opacity: 0.7;
+        }
       }
     }
   }
@@ -74,8 +88,23 @@
     display: flex;
     flex-direction: column;
     &__iframe {
-      height: 70vh;
-      width: 100%;
+      border-radius: 15px;
+      margin: 0;
+      min-width: 320px;
+      height: 61vh;
+      @media screen and (min-width: 320px) {
+        margin: 10px 0;
+      }
+      @media screen and (min-height: $height-667) {
+        height: 66vh;
+      }
+      @media screen and (min-height: $height-812) {
+        height: 69vh;
+        // left: 10%;
+      }
+      @media screen and (min-height: $height-1024) {
+        height: 80vh;
+      }
     }
   }
 }
