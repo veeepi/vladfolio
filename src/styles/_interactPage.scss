@@ -38,33 +38,48 @@
     justify-content: flex-start;
     height: 70vh;
     &__post {
-      align-items: center;
-      background-color: $mistblue;
-      background-image: none;
-      border: 1px solid $warmorange;
-      border-radius: 25px;
       display: flex;
-      flex-direction: column;
-      height: 12vh;
-      justify-content: space-between;
-      margin: 5px 0;
-      padding: 2%;
-      transition: background-color 420ms ease-in-out;
-      &:hover {
-        background-color: $lighter-mistblue;
+      flex-direction: row;
+      &__action {
+        align-items: center;
+        background-color: $mistblue;
+        background-image: none;
+        border: 1px solid $warmorange;
+        border-radius: 25px;
+        display: flex;
+        flex-direction: column;
+        min-height: 12vh;
+        justify-content: space-between;
+        margin: 5px 0;
+        padding: 2%;
         transition: background-color 420ms ease-in-out;
+        &:hover {
+          background-color: $lighter-mistblue;
+          transition: background-color 420ms ease-in-out;
+        }
+        &__title {
+          font-family: 'RussoOne-Regular';
+          font-size: 1.6em;
+          color: white;
+        }
+        &__description {
+          font-family: 'RussoOne-Regular';
+          font-size: 1.1em;
+        }
+        &:hover {
+          cursor: pointer;
+        }
       }
-      &__title {
-        font-family: 'RussoOne-Regular';
-        font-size: 1.6em;
-        color: white;
-      }
-      &__description {
-        font-family: 'RussoOne-Regular';
-        font-size: 1.1em;
-      }
-      &:hover {
-        cursor: pointer;
+      &__aside {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 12px 3px;
+        &__url {
+        }
+        &__icons {
+          opacity: 0.7;
+        }
       }
     }
   }
