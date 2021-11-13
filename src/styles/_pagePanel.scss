@@ -1,4 +1,6 @@
 .pagePanel {
+  animation-name: fadeIn;
+  animation-duration: 0.4s;
   z-index: $zi_pagePanel;
   border-radius: 50px;
   display: flex;
@@ -8,21 +10,12 @@
   background-color: $mistblue;
   min-width: 320px;
   width: 90%;
-
-  // height: 90%;
-  // min-height: 90vh;
-  // // min-height: 40vh;
-  // top: 15%;
-  // left: 2.5%;
-  // padding-bottom: 5%;
   border: 2.1px solid $dark-mistblue;
   @media screen and (min-width: $min-width-tablet) {
     width: 80%;
-    // left: 10%;
   }
   @media screen and (min-width: 1000px) {
     width: 50%;
-    // left: 25%;
   }
 
   &__heading {
@@ -83,5 +76,14 @@
 
   &__body {
     display: flex;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
