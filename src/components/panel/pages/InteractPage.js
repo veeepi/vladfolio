@@ -1,16 +1,35 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { AiOutlineLink } from 'react-icons/ai';
 import { Scrollbars } from 'react-custom-scrollbars';
 import projects from '../../../data/Projects';
 import BackButton from '../../custom/BackButton';
+import FlyingButton from '../../custom/FlyingButton';
 
 export default function InteractPage() {
   const interactPageProjects = projects.filter((item) => item.interactPage);
 
   const [appSelected, setAppSelected] = useState(null);
 
+  const [eventData, setEventData] = useState({});
+  useEffect(() => {
+    if (appSelected) {
+    }
+  }, [appSelected]);
+
+  const getCoordinatesClicked = (e) => {
+    e.preventDefault();
+    let clientX = e.clientX;
+    let clientY = e.clientY;
+    setEventData({ clientX, clientY });
+  };
+
   return (
     <div className="interactPage animate__animated animate__bounceInLeft">
+      <FlyingButton
+        action={setAppSelected}
+        appSelected={appSelected}
+        eventData={eventData}
+      />
       {appSelected ? (
         <div className="interactPage__applet">
           <BackButton action={setAppSelected} text={'Back to Menu'} />
@@ -32,7 +51,10 @@ export default function InteractPage() {
                   <button
                     key={index}
                     className="interactPage__menu__post__action"
-                    onClick={() => setAppSelected(item)}
+                    onClick={(e) => {
+                      setAppSelected(item);
+                      getCoordinatesClicked(e);
+                    }}
                   >
                     <h1 className="interactPage__menu__post__action__title">
                       {item.title}
