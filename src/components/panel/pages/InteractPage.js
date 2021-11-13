@@ -47,9 +47,8 @@ export default function InteractPage() {
           <div className="interactPage__menu">
             {interactPageProjects.map((item, index) => {
               return (
-                <article className="interactPage__menu__post">
+                <article key={index} className="interactPage__menu__post">
                   <button
-                    key={index}
                     className="interactPage__menu__post__action"
                     onClick={(e) => {
                       setAppSelected(item);

@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { useDrop } from 'react-dnd';
 import { DragTargetContext } from '../../App';
 
-const DragTarget = (props) => {
+const DragTarget = ({ aButtonIsDragging }) => {
   const { updateSelectedPage } = useContext(DragTargetContext);
 
   const [{ isOver }, drop] = useDrop({
@@ -18,7 +18,7 @@ const DragTarget = (props) => {
       ref={drop}
       style={isOver ? { backgroundColor: 'red', transform: 'scale(1.2)' } : {}}
       className={
-        props.aButtonIsDragging
+        aButtonIsDragging
           ? 'inner__buttonDraggingDroptarget'
           : 'inner__droptarget'
       }

@@ -36,16 +36,11 @@ function App() {
     setPageDisplayed(page);
   };
 
-  // function triggered by DragButton's isDragging property
-  const toggleAButtonIsDragging = () => {
-    setAButtonIsDragging((prevAButtonIsDragging) => !prevAButtonIsDragging);
-  };
-
   return (
     <div className="App">
-      <div className="Background__fog"></div>
+      <div className="background__fog"></div>
       <Heading />
-      <DragSourceContext.Provider value={{ toggleAButtonIsDragging }}>
+      <DragSourceContext.Provider value={{ setAButtonIsDragging }}>
         <DragTargetContext.Provider value={{ updateSelectedPage }}>
           <DndProvider backend={isMobile ? TouchBackend : HTML5Backend}>
             {displayPagePanel /*on &&*/ && (
