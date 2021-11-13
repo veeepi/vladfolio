@@ -20,7 +20,6 @@ export default function InteractPage() {
     e.preventDefault();
     let clientX = e.clientX;
     let clientY = e.clientY;
-    console.log(clientX, clientY);
     setEventData({ clientX, clientY });
   };
 

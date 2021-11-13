@@ -4,15 +4,13 @@ import { CgClose } from 'react-icons/cg';
 export default function FlyingButton({ action, appSelected, eventData }) {
   return (
     <button
+      className={`flyingButton`}
       style={{
         display: `${appSelected ? 'block' : 'none'}`,
-        position: 'fixed',
-        left: `${eventData.clientX}px`,
-        top: `${eventData.clientY}px`,
-        // left: 0,
-        // top: 0,
+
+        left: `${eventData.clientX - 35}px`,
+        top: `${eventData.clientY - 35}px`,
       }}
-      className="flyingButton"
       onClick={() => {
         action(null);
       }}
