@@ -22,11 +22,6 @@ const DragTarget = ({ aButtonIsDragging }) => {
       className={`inner__droptarget ${
         aButtonIsDragging ? 'inner__droptarget__dropPrompt' : ''
       }`}
-      // className={
-      //   aButtonIsDragging
-      //     ? 'inner__buttonDraggingDroptarget'
-      //     : 'inner__droptarget'
-      // }
     ></div>
   );
 };

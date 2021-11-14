@@ -1,22 +1,16 @@
 #dragButton1 {
-  // display: none;
   left: 25%;
   top: 25%;
 }
 #dragButton2 {
-  // display: none;
-  // left: 35%;
   right: 25%;
   top: 25%;
 }
 #dragButton3 {
-  // display: none;
   left: 25%;
-  // top: 40%;
   bottom: 25%;
 }
 #dragButton4 {
-  // display: none;
   right: 25%;
   bottom: 25%;
 }
@@ -79,10 +73,6 @@
     position: relative;
     border: 1px dotted #6dbbc983;
     @include hoverGlow20;
-    // &:hover {
-    // 	background-color: $mistblue;
-    // 	opacity: 0.3;
-    // }
   }
 
   &__dragPrompt {
@@ -207,10 +197,6 @@
         &:hover {
           transform: scale(1.55) rotate(0.8turn);
         }
-        // @media screen and (min-width: $min-width-tablet) {
-        //   width: 90px;
-        //   height: 90px;
-        // }
       }
     }
 

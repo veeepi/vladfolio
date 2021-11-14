@@ -15,18 +15,15 @@
     animation: fogAnim 50s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
-    // -webkit-transform: scaleY(-1);
   }
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 
   @media screen and (min-width: $min-width-tablet) {
-    // background-image: url('../images/main_background_tablet.jpg');
     background-repeat: no-repeat;
   }
   @media screen and (min-width: $min-width-desktop) {
-    // background-image: url('../images/main_background.jpg');
     background-repeat: no-repeat;
   }
 }

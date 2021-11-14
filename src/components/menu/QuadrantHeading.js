@@ -8,8 +8,6 @@ const QuadrantHeading = (props) => {
 
   return (
     <div className="quadrant__heading">
-      {/* {this.state.title} */}
-
       <div className={'quadrant__heading__' + props.pageId}>
         {arrayPageTitle.map((char, index) => {
           return (

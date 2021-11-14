@@ -6,7 +6,6 @@
     cursor: default;
     &__1 {
       // -- "INTERACT"
-      // position: relative;
       margin-left: -5.5vw;
       margin-top: 4vh;
       transform: skew(-30deg, 2deg);
@@ -14,11 +13,9 @@
       background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      // transform: ;
     }
     &__2 {
       // -- "RESUME"
-      // position: relative;
       margin-left: -1vh;
       margin-top: 4vh;
       transform: skew(-12deg, -8deg);
@@ -31,7 +28,6 @@
     }
     &__3 {
       // --CONTACT
-      // position: relative;
       margin-left: -4.5vw;
       margin-top: 1.5vh;
       transform: skew(20deg, -3deg);
@@ -41,7 +37,6 @@
     }
     &__4 {
       // -- PORTFOLIO
-      // position: relative;
       margin-left: -4.6vw;
       margin-top: 2.8vh;
       transform: rotate(12deg);
