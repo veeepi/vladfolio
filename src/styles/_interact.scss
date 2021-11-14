@@ -25,22 +25,3 @@ h1 span span {
   bottom: -1em;
   opacity: 0;
 }
-
-@keyframes move-text-color {
-  0% {
-    bottom: -0.2em;
-    opacity: 1;
-    color: #3e5c76;
-  }
-
-  50% {
-    bottom: 0.2em;
-    color: #ec058e;
-  }
-
-  100% {
-    bottom: 0;
-    opacity: 1;
-    color: #cb3126;
-  }
-}

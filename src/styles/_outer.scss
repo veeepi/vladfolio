@@ -1,6 +1,6 @@
 .outer {
   z-index: $zi_outer;
-  animation: fadeInAnimation ease 6s;
+  animation: fadeIn ease 3s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
   position: relative;
@@ -53,13 +53,4 @@
     rgba(255, 255, 0, 0.1),
     transparent
   );
-}
-
-@keyframes fadeInAnimation {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
 }
