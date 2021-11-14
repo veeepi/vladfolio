@@ -65,3 +65,11 @@
     color: #cb3126;
   }
 }
+@keyframes pulsate {
+  from {
+    filter: brightness(100%);
+  }
+  to {
+    filter: brightness(115%);
+  }
+}

@@ -16,12 +16,17 @@ const DragTarget = ({ aButtonIsDragging }) => {
   return (
     <div
       ref={drop}
-      style={isOver ? { backgroundColor: 'red', transform: 'scale(1.2)' } : {}}
-      className={
-        aButtonIsDragging
-          ? 'inner__buttonDraggingDroptarget'
-          : 'inner__droptarget'
+      style={
+        isOver ? { filter: 'brightness(130%)', transform: 'scale(1.15)' } : {}
       }
+      className={`inner__droptarget ${
+        aButtonIsDragging ? 'inner__droptarget__dropPrompt' : ''
+      }`}
+      // className={
+      //   aButtonIsDragging
+      //     ? 'inner__buttonDraggingDroptarget'
+      //     : 'inner__droptarget'
+      // }
     ></div>
   );
 };

@@ -1,5 +1,4 @@
 import './styles/main.scss';
-import './App.css';
 import React, { useState, useEffect, createContext } from 'react';
 import { DndProvider } from 'react-dnd';
 import { isMobile } from 'react-device-detect';
