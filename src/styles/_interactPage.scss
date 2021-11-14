@@ -87,6 +87,10 @@
   &__applet {
     display: flex;
     flex-direction: column;
+    &__loading-spinner {
+      position: absolute;
+      top: 20%;
+    }
     &__iframe {
       border-radius: 15px;
       margin: 0;
