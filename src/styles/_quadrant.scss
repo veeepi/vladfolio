@@ -1,22 +1,16 @@
 #dragButton1 {
-  // display: none;
   left: 25%;
   top: 25%;
 }
 #dragButton2 {
-  // display: none;
-  // left: 35%;
   right: 25%;
   top: 25%;
 }
 #dragButton3 {
-  // display: none;
   left: 25%;
-  // top: 40%;
   bottom: 25%;
 }
 #dragButton4 {
-  // display: none;
   right: 25%;
   bottom: 25%;
 }
@@ -79,10 +73,6 @@
     position: relative;
     border: 1px dotted #6dbbc983;
     @include hoverGlow20;
-    // &:hover {
-    // 	background-color: $mistblue;
-    // 	opacity: 0.3;
-    // }
   }
 
   &__dragPrompt {
@@ -130,7 +120,49 @@
     }
   }
 
+  &__dragbuttonContainer {
+    position: relative;
+  }
+
+  &__clickAgainPrompt {
+    animation-name: fadeIn;
+    animation-duration: 0.6s;
+    color: black;
+    font-family: 'NorseBold';
+    font-size: 1.4em;
+    font-style: italic;
+    pointer-events: none;
+    position: fixed;
+    z-index: 1;
+  }
+
   &__dragbutton {
+    animation-name: spin;
+    animation-duration: 10000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    background-color: transparent;
+    background-image: radial-gradient(
+      closest-side at 50% 50%,
+      rgba(255, 170, 75, 1),
+      rgba(255, 170, 75, 1),
+      rgba(255, 170, 75, 1),
+      rgba(235, 145, 55, 1),
+      rgba(235, 145, 55, 1),
+      rgba(235, 145, 55, 1),
+      rgba(235, 145, 55, 1),
+      rgba(220, 135, 48, 0.95),
+      rgba(220, 135, 48, 0.82),
+      rgba(217, 123, 38, 0.75),
+      rgba(217, 123, 38, 0.5),
+      rgba(217, 123, 38, 0.3),
+      rgba(217, 123, 38, 0.2),
+      rgba(217, 123, 38, 0.1),
+      rgba(217, 123, 38, 0.1),
+      rgba(217, 123, 38, 0.05),
+      transparent
+    );
+    border: none;
     opacity: 1;
     position: absolute;
     display: flex;
@@ -157,35 +189,16 @@
       padding: -50%;
       @include transition250ms;
       &:hover {
-        transform: scale(1.2);
+        transform: scale(1.2) rotate(0.3turn);
+      }
+      &__clickedOnce {
+        filter: brightness(130%);
+        transform: scale(1.35) rotate(0.5turn);
+        &:hover {
+          transform: scale(1.55) rotate(0.8turn);
+        }
       }
     }
-
-    background-image: radial-gradient(
-      closest-side at 50% 50%,
-      rgba(255, 170, 75, 1),
-      rgba(255, 170, 75, 1),
-      rgba(255, 170, 75, 1),
-      rgba(235, 145, 55, 1),
-      rgba(235, 145, 55, 1),
-      rgba(235, 145, 55, 1),
-      rgba(235, 145, 55, 1),
-      rgba(220, 135, 48, 0.95),
-      rgba(220, 135, 48, 0.82),
-      rgba(217, 123, 38, 0.75),
-      rgba(217, 123, 38, 0.5),
-      rgba(217, 123, 38, 0.3),
-      rgba(217, 123, 38, 0.2),
-      rgba(217, 123, 38, 0.1),
-      rgba(217, 123, 38, 0.1),
-      rgba(217, 123, 38, 0.05),
-      transparent
-    );
-
-    animation-name: spin;
-    animation-duration: 10000ms;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
 
     &:hover {
       box-shadow: 0 0 40px #ddd;
@@ -210,23 +223,5 @@
         transparent
       );
     }
-  }
-}
-
-@keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes animate {
-  0% {
-    background-position: -500%;
-  }
-  100% {
-    background-position: 500%;
   }
 }

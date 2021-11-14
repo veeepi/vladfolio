@@ -4,24 +4,22 @@ import { Scrollbars } from 'react-custom-scrollbars';
 import projects from '../../../data/Projects';
 import BackButton from '../../custom/BackButton';
 import FlyingButton from '../../custom/FlyingButton';
+import getCoordinatesClicked from '../../../utils/getCoordinatesClicked';
+
+var Spinner = require('react-spinkit');
 
 export default function InteractPage() {
   const interactPageProjects = projects.filter((item) => item.interactPage);
 
   const [appSelected, setAppSelected] = useState(null);
 
+  const [loading, setLoading] = useState(true);
+
   const [eventData, setEventData] = useState({});
   useEffect(() => {
     if (appSelected) {
     }
   }, [appSelected]);
-
-  const getCoordinatesClicked = (e) => {
-    e.preventDefault();
-    let clientX = e.clientX;
-    let clientY = e.clientY;
-    setEventData({ clientX, clientY });
-  };
 
   return (
     <div className="interactPage animate__animated animate__bounceInLeft">
@@ -33,10 +31,19 @@ export default function InteractPage() {
       {appSelected ? (
         <div className="interactPage__applet">
           <BackButton action={setAppSelected} text={'Back to Menu'} />
+          {loading ? (
+            <Spinner
+              className="interactPage__applet__loading-spinner"
+              name="three-bounce"
+              color="white"
+              fadeIn="none"
+            />
+          ) : null}
           <iframe
             className="interactPage__applet__iframe"
             src={appSelected.url}
             title="Google.com (test)"
+            onLoad={() => setLoading(false)}
           ></iframe>
         </div>
       ) : (
@@ -47,13 +54,12 @@ export default function InteractPage() {
           <div className="interactPage__menu">
             {interactPageProjects.map((item, index) => {
               return (
-                <article className="interactPage__menu__post">
+                <article key={index} className="interactPage__menu__post">
                   <button
-                    key={index}
                     className="interactPage__menu__post__action"
                     onClick={(e) => {
                       setAppSelected(item);
-                      getCoordinatesClicked(e);
+                      setEventData(getCoordinatesClicked(e));
                     }}
                   >
                     <h1 className="interactPage__menu__post__action__title">
