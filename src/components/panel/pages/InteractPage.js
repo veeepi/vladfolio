@@ -4,6 +4,7 @@ import { Scrollbars } from 'react-custom-scrollbars';
 import projects from '../../../data/Projects';
 import BackButton from '../../custom/BackButton';
 import FlyingButton from '../../custom/FlyingButton';
+import getCoordinatesClicked from '../../../utils/getCoordinatesClicked';
 
 var Spinner = require('react-spinkit');
 
@@ -19,13 +20,6 @@ export default function InteractPage() {
     if (appSelected) {
     }
   }, [appSelected]);
-
-  const getCoordinatesClicked = (e) => {
-    e.preventDefault();
-    let clientX = e.clientX;
-    let clientY = e.clientY;
-    setEventData({ clientX, clientY });
-  };
 
   return (
     <div className="interactPage animate__animated animate__bounceInLeft">
@@ -65,7 +59,7 @@ export default function InteractPage() {
                     className="interactPage__menu__post__action"
                     onClick={(e) => {
                       setAppSelected(item);
-                      getCoordinatesClicked(e);
+                      setEventData(getCoordinatesClicked(e));
                     }}
                   >
                     <h1 className="interactPage__menu__post__action__title">
