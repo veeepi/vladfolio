@@ -90,25 +90,25 @@
     font-size: 1.3em;
     #dragPromptText_D {
       font-size: 1.2em;
-      @media screen and (min-width: $min-width-tablet) {
+      @media screen and (min-width: $min-width-tablet) and (orientation: portrait) {
         font-size: 1.9em;
       }
     }
     #dragPromptText_R {
       font-size: 1.1em;
-      @media screen and (min-width: $min-width-tablet) {
+      @media screen and (min-width: $min-width-tablet) and (orientation: portrait) {
         font-size: 1.7em;
       }
     }
     #dragPromptText_A {
       font-size: 1em;
-      @media screen and (min-width: $min-width-tablet) {
+      @media screen and (min-width: $min-width-tablet) and (orientation: portrait) {
         font-size: 1.5em;
       }
     }
     #dragPromptText_G {
       font-size: 0.9em;
-      @media screen and (min-width: $min-width-tablet) {
+      @media screen and (min-width: $min-width-tablet) and (orientation: portrait) {
         font-size: 1.3em;
       }
     }
