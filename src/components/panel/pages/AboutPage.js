@@ -62,7 +62,7 @@ export default function AboutPage() {
                 <li>HTML, CSS/SASS</li>
                 <li>Bootstrap</li>
                 <li>Javascript, jQuery</li>
-                <li>React.js, React-Native, Angular</li>
+                <li>ReactJS, Angular, React-Native</li>
               </ul>
             </div>
             <div className="aboutPage__body__skills__column__tools"></div>
@@ -74,8 +74,8 @@ export default function AboutPage() {
             <div className="aboutPage__body__skills__column__body">
               <ul>
                 <li>C#, Java, Ruby, Python</li>
-                <li>SQL, MQL</li>
                 <li>ASP.NET Core, NodeJS</li>
+                <li>SQL, MQL/MongoDB</li>
               </ul>
             </div>
           </div>
@@ -95,10 +95,18 @@ export default function AboutPage() {
             <br />
 
             <h3 className="aboutPage__body__experience__section__title">
+              Lighthouse Labs
+            </h3>
+            <h4 className="aboutPage__body__experience__section__description">
+              Intro to Web Development
+            </h4>
+            <br />
+
+            <h3 className="aboutPage__body__experience__section__title">
               University of British Columbia
             </h3>
             <h4 className="aboutPage__body__experience__section__description">
-              Bachelor of Arts Degree - Major in Mathematics, Minor in Economics
+              BA - Major in Mathematics, Minor in Economics
             </h4>
           </div>
 
@@ -106,14 +114,14 @@ export default function AboutPage() {
             <h1 className="aboutPage__body__experience__section__heading">
               Recent Work Experience
             </h1>
-            <h3 className="aboutPage__body__experience__section__subject">
+            <h3 className="aboutPage__body__experience__section__title">
               Douglas College
             </h3>
             <h4 className="aboutPage__body__experience__section__description">
               Accounting &amp; Finance
             </h4>
             <br />
-            <h3 className="aboutPage__body__experience__section__subject">
+            <h3 className="aboutPage__body__experience__section__title">
               Paladin Security Group Ltd.
             </h3>
             <h4 className="aboutPage__body__experience__section__description">
