@@ -128,6 +128,14 @@
           @include textSize_h3;
           color: $darkest-mistblue;
         }
+        &__title {
+          font-size: 1em;
+          // margin: 0 0 0 10px;
+        }
+        &__description {
+          font-size: 0.9em;
+          margin: 0 0 0 10px;
+        }
       }
     }
   }
