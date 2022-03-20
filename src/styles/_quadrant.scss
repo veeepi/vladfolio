@@ -169,7 +169,11 @@
     border-radius: 50%;
     width: 65px;
     height: 65px;
-    @media screen and (min-width: $min-width-tablet) {
+    @media screen and (min-width: $min-width-tablet) and (orientation: portrait) {
+      width: 95px;
+      height: 95px;
+    }
+    @media screen and (min-height: $min-width-tablet) and (orientation: landscape) {
       width: 95px;
       height: 95px;
     }
@@ -180,7 +184,11 @@
       color: lightcoral;
       width: 40px;
       height: 40px;
-      @media screen and (min-width: $min-width-tablet) {
+      @media screen and (min-width: $min-width-tablet) and (orientation: portrait) {
+        width: 75px;
+        height: 75px;
+      }
+      @media screen and (min-height: $min-width-tablet) and (orientation: landscape) {
         width: 75px;
         height: 75px;
       }
